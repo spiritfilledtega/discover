@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <title>Bin Ex Op || Binary Brokers</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="CCO">
+  <meta name="keywords" content="Bin Ex Op || Licensed Binary Traders/Brokers">
+  <meta name="author" content="CCO">
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/icon/themify-icons/themify-icons.css' %}">
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/icon/icofont/css/icofont.css' %}"> -->
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/icofont/icofont.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/icofont/icofont.css' %}">
+
+
+
+  <link rel="stylesheet" href="https://allyoucan.cloud/cdn/w3css/4.12/w3.css" integrity="sha384-AhznYD978FQBKO9DjkvK6PwfyAjKnPZwtF/7ipPHgkZs+I8R4DxoFswBGcQdKz9l" crossorigin="anonymous">
+
+  <script src="https://allyoucan.cloud/cdn/jquery/core/3.4.1/jquery.js" integrity="sha384-v/CvOfYoICV4azK6zXTy9qXP6UwbdbFVuxd2Lorpes7n5YVsaU1bQqIalcktKchl" crossorigin="anonymous"></script>
+
+
+
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/pages/flag-icon/flag-icon.min.css' %}"> -->
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/pages/menu-search/css/component.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/pages/data-table/css/buttons.dataTables.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/css/style.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/css/color/color-1.css' %}" id="color" />
+
+  <style type="text/css">
+
+    body {
+       background-color = black;
+    }
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+
+    .my-float {
+      margin-top: 16px;
+    }
+  </style>
+
+</head>
+
+{% if user.profile.suspend_user %}
+<div class="container" style="background:black">
+  <div class="jumbotron" style="background:red">
+    <br><br><br><br>
+    <strong> <em>
+        <h1 style="color:white" align="center">{{ user.profile.suspend_user }}</h1>
+      </em> </strong>
+  </div>
+</div>
+
+
+<!-- <div class="container" style="background:black">
+  <div class="jumbotron" style="background:red">
+    <br><br><br><br>
+    <strong> <em>
+        <h1 style="color:white" align="center">Contact Your Account Manager On Directive On How To Unsuspend Your Account</h1>
+      </em> </strong>
+  </div>
+</div> -->
+
+
+{% else %}
+
+<body class="fix-menu dark-layout" style="background-color:#1a2f3d">
+
+
+  <div class="theme-loader">
+    <div class="ball-scale">
+      <div></div>
+    </div>
+  </div>
+
+
+  <nav class="navbar header-navbar">
+    <div class="navbar-wrapper">
+      <div class="navbar-logo">
+        <a class="mobile-menu collapsed" id="mobile-collapse" href="#!">
+          menu
+        </a>
+        <!--<a class="mobile-search morphsearch-search" href="#">-->
+        <!--  <i class="ti-search"></i>-->
+        <!--</a>-->
+        <a href="#">
+          Bin Ex Op</a>
+        <a class="mobile-options">
+
+        </a>
+      </div>
+      <div class="navbar-container container-fluid">
+        <div>
+          <ul class="nav-left">
+            <li>
+
+              <a id="collapse-menu" href="#">
+                menu
+              </a>
+            </li>
+            <li>
+              <a href="#!" onclick="javascript:toggleFullScreen()">
+
+              </a>
+            </li>
+          </ul>
+          <ul class="nav-right">
+            <li>
+              <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                  }, 'google_translate_element');
+                }
+              </script>
+              <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </li>
+
+            <li class="user-profile header-notification">
+              <a href="#!">
+                <img src="{% static 'binaryassets/user/assets/images/avater.png' %}" alt="User-Profile-Image">
+                <span>{{ user.username }}</span>
+                <!-- <i class="ti-angle-down"></i> -->
+              </a>
+              <ul class="show-notification profile-notification">
+                <li>
+                  <a href="#">
+                    <!-- <i class="ti-user"></i>  -->
+                    Welcome
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'account_logout' %}">
+                    <!-- <i class="ti-layout-sidebar-left"></i>  -->
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="main-menu">
+    <div class="main-menu-header">
+      <img class="img-40" src="{% static 'binaryassets/user/assets/images/avater.png' %}" alt="User-Profile-Image">
+      <div class="user-details">
+        <span>{{ user.username }}</span>
+        <span><span class="badge bg-primary"></span> Online</span>
+      </div>
+    </div>
+
+
+    {% if user.profile.status %}
+    <div class="main-menu-content">
+      <ul class="main-navigation">
+
+        <li class="nav-item single-item">
+          <a href="{% url 'basic:index' %}">
+            <!-- <i class="ti-home"></i> -->
+            <span data-i18n="nav.dash.main">Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item single-item">
+          <a href="{% url 'user' %}">
+            <!-- <i class="ti-home"></i> -->
+            <span data-i18n="nav.dash.main">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="{% url 'deposite' %}">
+            <!-- <i class="ti-arrow-circle-down"></i> -->
+            <span data-i18n="nav.page_layout.main">Fund Account</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+        {% comment %} {% url 'request' %} {% endcomment %}
+          <a href="{% url 'withdraw' %}">
+            <!-- <i class="ti-arrow-circle-up"></i> -->
+            <span data-i18n="nav.page_layout.main">Withdraw Fund</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="#">
+            <!-- <i class="ti-reload"></i> -->
+            <span data-i18n="nav.page_layout.main">Trade History</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item single-item">
+          <a href="https://BitPro.com/index.php/User/userProfile">
+            <i class="ti-user"></i>
+            <span data-i18n="nav.page_layout.main">User Profile</span>
+          </a>
+        </li> -->
+        <li class="nav-item single-item">
+        {% comment %} {% url 'verify' %} {% endcomment %}
+          <a href="#">
+            <!-- <i class="ti-alert"></i> -->
+            <span data-i18n="nav.page_layout.main">Verify Account</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="{% url 'account_logout' %}">
+            <!-- <i class="ti-alert"></i> -->
+            <span data-i18n="nav.page_layout.main">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  {% else %}
+
+  <div class="main-menu-content">
+    <ul class="main-navigation">
+
+      <li class="nav-item single-item">
+        <a href="{% url 'basic:index' %}">
+          <!-- <i class="ti-home"></i> -->
+          <span data-i18n="nav.dash.main">Home</span>
+        </a>
+      </li>
+
+      <li class="nav-item single-item">
+        <a href="{% url 'user' %}">
+          <!-- <i class="ti-home"></i> -->
+          <span data-i18n="nav.dash.main">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item single-item">
+        <a href="{% url 'deposite' %}">
+          <!-- <i class="ti-arrow-circle-down"></i> -->
+          <span data-i18n="nav.page_layout.main">Fund Account</span>
+        </a>
+      </li>
+      <li class="nav-item single-item">
+        <a href="{% url 'withdraw' %}">
+          <!-- <i class="ti-arrow-circle-up"></i> -->
+          <span data-i18n="nav.page_layout.main">Withdraw Fund</span>
+        </a>
+      </li>
+      <li class="nav-item single-item">
+        <a href="#">
+          <!-- <i class="ti-reload"></i> -->
+          <span data-i18n="nav.page_layout.main">Trade History</span>
+        </a>
+      </li>
+      <!-- <li class="nav-item single-item">
+        <a href="https://BitPro.com/index.php/User/userProfile">
+          <i class="ti-user"></i>
+          <span data-i18n="nav.page_layout.main">User Profile</span>
+        </a>
+      </li> -->
+      <li class="nav-item single-item">
+        <a href="#">
+          <!-- <i class="ti-alert"></i> -->
+          <span data-i18n="nav.page_layout.main">Verify Account</span>
+        </a>
+      </li>
+      <li class="nav-item single-item">
+        <a href="{% url 'account_logout' %}">
+          <!-- <i class="ti-alert"></i> -->
+          <span data-i18n="nav.page_layout.main">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  {% endif %}
+
+
+
+  <div class="main-body">
+    <div class="page-wrapper">
+      <div class="page-header">
+        <div class="page-header-title">
+          <h4>Bin Ex Op</h4>
+        </div>
+        <div class="page-header-breadcrumb">
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="#">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="{% url 'basic:index' %}">Home</a>
+              <!--</li>-->
+              <!--<li class="breadcrumb-item"><a href="#">ABitc</a>-->
+              <!--</li>-->
+          </ul>
+        </div>
+      </div>
+
+
+      {% if user.profile.status_message %}
+      <div class="jumbotron">
+        <h3 class='text-primary'>{{ user.profile.status_message }}</h3>
+      </div>
+      {% else %}
+
+      <div class="page-body">
+        <div class="col-lg-12">
+          <!--<div class="alert alert-danger m-b-15">-->
+          <!--  <h4><b>Important</b></h4>-->
+          <!--  <p>-->
+          <!--    Hello <b>{{ user.email }}</b>, Your Account has not been verified. Please Visit the <a href="{% url 'verify' %}">Verify</a> section of your Dashboard to Verify Your Account.-->
+          <!--    Unverified Accounts cannot-->
+          <!--    be-->
+          <!--    Traded.-->
+          <!--  </p>-->
+          <!--</div>-->
+        </div>
+        <div style="width: 100%; height:40px; background-color: #FFFFFF; overflow:hidden; text-align: right; font-size: 12px; box-sizing:content-box; font-feature-settings: normal; text-size-adjust: 100%;">
+          <div><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"
+              style="border:0;margin:0;padding:0;"></iframe></div>
+        </div>
+        {% endif %}
+            <br />
+        <div class="page-body">
+          <div class="row">
+            <div class="col-md-12 col-xl-4">
+              <div class="card table-card" style="background-color:#080f29; color:white">
+                <div class="">
+                  <div class="row-table">
+                    <div class="col-sm-6 card-block-big br">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-money text-success"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Balance</span>
+                          <h5>$ {{ user.profile.balance }}</h5>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 card-block-big">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-ui-clock text-danger"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Invested</span>
+                          <h5>$ {{ user.profile.invested }}</h5>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="row-table">
+                    <div class="col-sm-6 card-block-big br">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-circled-up text-info"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>BTC Bal</span>
+                          <h5>{{ user.profile.btc_bal }}</h5>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 card-block-big">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-circled-down text-warning"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Ref Bonus</span>
+                          <h5>$ {{ user.profile.ref_bonus }} </h5>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-12 col-xl-4">
+
+              <div class="card table-card" style="background-color:#080f29; color:white">
+                <div class="">
+                  <div class="row-table">
+                    <div class="col-sm-6 card-block-big br">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-idea text-primary"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Status</span>
+                          <h6>
+                            {% if user.profile.status %}
+                            <h6 class='text-primary'>{{ user.profile.status }}</h6>
+                            {% else %}
+                            <h6 class='text-danger'>Unverified</h6>
+                            {% endif %}
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 card-block-big">
+                      <div class="row ">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-bank text-danger"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Currency</span>
+                          <h5>$</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="row-table">
+                    <div class="col-sm-6 card-block-big br">
+                      <div class="row ">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-shield-alt text-info"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Type</span>
+                          <h6>Live</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 card-block-big">
+                      <div class="row ">
+                        <div class="col-sm-4">
+                          <i class="icofont icofont-network-tower text-primary"></i>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                          <span>Signal</span>
+                          <h5>82%</h5>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-12 col-xl-4">
+
+                    <a style="color:white" href="https://www.binaryexchangeoptions.com/accounts/signup/" >referral link: https://www.binaryexchangeoptions.com/accounts/signup?ref={{ user.username }}
+
+                    </a>
+
+            </div>
+            <hr />
+            <br />
+
+            <div class="col-md-12 col-xl-4">
+
+              <div class="card table-card widget-primary-card">
+                <div class="">
+                  <div class="row-table">
+                    <div class="col-sm-3 card-block-big">
+                      <i class="icofont icofont-star"></i>
+                    </div>
+                    <div class="col-sm-9">
+                      <h4>4326 +</h4>
+                      <h6>Ratings Received</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card table-card widget-success-card">
+                <div class="">
+                  <div class="row-table">
+                    <div class="col-sm-3 card-block-big">
+                      <i class="icofont icofont-trophy-alt"></i>
+                    </div>
+                    <div class="col-sm-9">
+                      <h4>27</h4>
+                      <h6>Achievements</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <!-- Everything concerning deposit and withdraw -->
+
+
+
+
+
+
+
+
+        </div><!-- leftpanel -->
+        <div class="modal fade bs-example-modal-static" tabindex="-1" role="dialog" data-backdrop="static" id="myModal1" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog" style="border-radius: 20px !important; padding: 10px !important;">
+            <div class="">
+              <div class="">
+                <div class="modal-content">
+                  <div class="modal-header" style="padding-left: 25px !important; padding-right: 25px !important; border: none !important">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                    <h3 class="modal-title" style="color:#275dd3 !important; font-weight: bold;"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp; Make Investment</h3>
+                  </div>
+                  <div class="modal-body" style="font-size:14px; padding-left: 25px !important; padding-right: 25px !important; color:#275dd3 !important; ">
+                    <div id="bar_code">
+
+
+                      <div class="form-group">
+                        <h2 style="text-align: center">$300 - $999</h2>
+                        <div class="alert alert-info">Enter an Amount you'd like to Invest. Starting from<b> $300 USD</b> You start Earning <b>10%</b> daily</div>
+                        <input class="form-control" type="text" placeholder="Enter Amount" id="a_v">
+                        <button type="button" class="btn btn-primary form-control" onclick="t()" id="sa">Invest</button>
+                        <div class="ae" style="border: 1px solid #b22222; color:#b22222; padding: 10px; border-radius: 8px; background: #fff; text-align: center; display: none;"><i class="fa fa-exclamation-triangle"></i> Amount not in Range</div>
+                      </div>
+
+                      <div class="form-group">
+                        <h2 style="text-align: center">$1000 - $3999</h2>
+                        <div class="alert alert-info">Enter an Amount you'd like to Invest. Starting from<b> $1000 USD</b> You start Earning <b>11%</b> daily</div>
+                        <input class="form-control" type="text" placeholder="Enter Amount" id="b_v">
+                        <button type="button" class="btn btn-primary form-control" onclick="b()" id="sb">Invest</button>
+                        <div class="be" style="border: 1px solid #b22222; color:#b22222; padding: 10px; border-radius: 8px; background: #fff; text-align: center; display: none;"><i class="fa fa-exclamation-triangle"></i> Amount not in Range</div>
+                      </div>
+
+                      <div class="form-group">
+                        <h2 style="text-align: center">$5000 and Above</h2>
+                        <div class="alert alert-info">Enter an Amount you'd like to Invest. Starting from<b> $5000 USD</b> You start Earning <b>11.6%</b> daily</div>
+                        <input class="form-control" type="text" placeholder="Enter Amount" id="c_v">
+                        <button type="button" class="btn btn-primary form-control" onclick="c()" id="sc">Invest</button>
+                        <div class="ce" style="border: 1px solid #b22222; color:#b22222; padding: 10px; border-radius: 8px; background: #fff; text-align: center; display: none;"><i class="fa fa-exclamation-triangle"></i> Amount not in Range</div>
+                      </div>
+
+
+
+
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+          function t() {
+            $('.be').fadeOut('200');
+            $('.ae').fadeOut('200');
+            $('.ce').fadeOut('200');
+            var av = $('#a_v').val();
+            var code = "f1dfb22aaf9c9f1d98d279fe7e2f9c4b";
+            if (av == '') {
+              $('.ae').fadeIn('200');
+            } else if (av < 300 || av > 999) {
+              $('.ae').fadeIn('200');
+              return false;
+            } else {
+              var dataString = 'amount=' + av + '&code=' + code + '&plan=a';
+              $.ajax({
+                url: 'process_dep.php',
+                type: 'post',
+                data: dataString,
+                beforeSend: function() {
+                  $('#sa').html('Processing...');
+                },
+                success: function(data) {
+
+                  //swal("Successful!", data, "success");
+                  //setTimeout(function(){
+                  //   window.location = "transaction_history";
+                  //}, 1000);
+
+                  $('#bar_code').html(data);
+                  $('#sa').html('Invest');
+
+                  $("#sa").attr("disabled", true);
+                  //window.location = 'home';
+                }
+              });
+            }
+          }
+
+
+          function b() {
+            $('.ae').fadeOut('200');
+            $('.be').fadeOut('200');
+            $('.ce').fadeOut('200');
+            var av = $('#b_v').val();
+            var code = "f1dfb22aaf9c9f1d98d279fe7e2f9c4b";
+            if (av == '') {
+              $('.be').fadeIn('200');
+            } else if (av < 1000 || av > 3999) {
+              $('.be').fadeIn('200');
+              return false;
+            } else {
+              var dataString = 'amount=' + av + '&code=' + code + '&plan=b';
+              $.ajax({
+                url: 'process_dep.php',
+                type: 'post',
+                data: dataString,
+                beforeSend: function() {
+                  $('#sb').html('Processing...');
+                },
+                success: function(data) {
+                  //swal("Successful!", data, "success");
+                  //setTimeout(function(){
+                  //   window.location = "transaction_history";
+                  //}, 1000);
+                  $('#bar_code').html(data);
+                  $('#sb').html('Invest');
+
+                  $("#sb").attr("disabled", true);
+                  //window.location = 'home';
+                }
+              });
+            }
+          }
+
+          function c() {
+            $('.ae').fadeOut('200');
+            $('.be').fadeOut('200');
+            $('.ce').fadeOut('200');
+            var av = $('#c_v').val();
+            var code = "f1dfb22aaf9c9f1d98d279fe7e2f9c4b";
+            if (av == '') {
+              $('.ce').fadeIn('200');
+            } else if (av < 5000 || av > 1950000) {
+              $('.ce').fadeIn('200');
+              return false;
+            } else {
+              var dataString = 'amount=' + av + '&code=' + code + '&plan=c';
+              $.ajax({
+                url: 'process_dep.php',
+                type: 'post',
+                data: dataString,
+                beforeSend: function() {
+                  $('#sc').html('Processing...');
+                },
+                success: function(data) {
+                  //swal("Successful!", data, "success");
+                  //setTimeout(function(){
+                  //   window.location = "transaction_history";
+                  //}, 1000);
+                  $('#bar_code').html(data);
+                  $('#sc').html('Invest');
+
+                  $("#sc").attr("disabled", true);
+                  //window.location = 'home';
+                }
+              });
+            }
+          }
+        </script>
+        <div class="mainpanel">
+          <div class="container" style="">
+
+          </div>
+
+
+          <div class="contentpanel">
+
+
+
+
+            <!-- TradingView widget strts -->
+
+
+            <!-- <div class="tradingview-widget-container" style="width: 100%; height: 72px;">
+                <iframe scrolling="no" allowtransparency="true" frameborder="0"
+                  src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22title%22%3A%22S%26P%20500%22%2C%22proName%22%3A%22INDEX%3ASPX%22%7D%2C%7B%22title%22%3A%22Shanghai%20Composite%22%2C%22proName%22%3A%22INDEX%3AXLY0%22%7D%2C%7B%22title%22%3A%22EUR%2FUSD%22%2C%22proName%22%3A%22FX_IDC%3AEURUSD%22%7D%2C%7B%22title%22%3A%22BTC%2FUSD%22%2C%22proName%22%3A%22BITFINEX%3ABTCUSD%22%7D%2C%7B%22title%22%3A%22ETH%2FUSD%22%2C%22proName%22%3A%22BITFINEX%3AETHUSD%22%7D%5D%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22compact%22%2C%22colorTheme%22%3A%22light%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A72%2C%22utm_source%22%3A%22binarycryptoexchange.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D"
+                  style="box-sizing: border-box; height: 72px; width: 100%;"></iframe>
+
+                <style>
+                  .tradingview-widget-copyright {
+                    font-size: 13px !important;
+                    line-height: 32px !important;
+                    text-align: center !important;
+                    vertical-align: middle !important;
+                    font-family: 'Trebuchet MS', Arial, sans-serif !important;
+                    color: #9db2bd !important;
+                  }
+
+                  .tradingview-widget-copyright .blue-text {
+                    color: #2196f3 !important;
+                  }
+
+                  .tradingview-widget-copyright a {
+                    text-decoration: none !important;
+                    color: #9db2bd !important;
+                  }
+
+                  .tradingview-widget-copyright a:visited {
+                    color: #9db2bd !important;
+                  }
+
+                  .tradingview-widget-copyright a:hover .blue-text {
+                    color: #38acdb !important;
+                  }
+
+                  .tradingview-widget-copyright a:active .blue-text {
+                    color: #299dcd !important;
+                  }
+
+                  .tradingview-widget-copyright a:visited .blue-text {
+                    color: #2196f3 !important;
+                  }
+                </style>
+              </div> -->
+            <!-- TradingView widget ends -->
+
+
+
+
+
+
+            <!-- <div class="row row-stat" style="color: #fff;">
+              <div class="col-md-12">
+                <div class="panel panel-primary-alt noborder" style="color: #fff; background: #025928;">
+                  <div class="panel-heading noborder" style="color: #fff; background: #025928;">
+                    <div class="panel-btns" style="display: none;">
+                      <a href="#" class="panel-close tooltips" data-toggle="tooltip" title="" data-original-title="Close Panel"><i class="fa fa-times"></i></a>
+                    </div>s -->
+
+
+
+            <!-- <div class="media-body" style="color: #fff; background: #025928;">
+                      <h5 class="md-title nomargin">Total Balance</h5>
+                      <span class="total">
+                        <h1 class="mt5 total">$0</h1>
+                      </span>
+
+                    </div>
+                    <hr>
+                    <div class="clearfix mt20">
+                      <div class="pull-left">
+                        <h5 class="md-title nomargin">Available Balance</h5>
+                        <h4 class="nomargin total2">$0</h4>
+
+                      </div>
+                      <div class="pull-right">
+                        <h5 class="md-title nomargin">Referral Earnings</h5>
+                        <h4 class="nomargin">$0</h4>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div> -->
+
+
+
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-primary btn-bordered" style="border:1px solid rgb(204, 210, 222); !important; color:#025928 !important; padding: 10px 10px; margin-right: 10px !important; font-size: 18px; font-weight: bold;"
+              ><a href="{% url 'deposite' %}" >Deposit</a> <i class="fa fa-arrow-circle-down"></i> </button>
+
+              <button class="btn btn-primary btn-bordered" style="border:1px solid rgb(204, 210, 222); !important; color:#025928 !important; padding: 10px 10px; !important; font-size: 18px; font-weight: bold;"><a href="{% url 'withdraw' %}" >Withdraw</a> <i
+                  class="fa fa-arrow-circle-up"></i></button>
+              <input type="hidden" id="" class="balance balanc" value="0">
+            </div>
+          </div>
+          <br>
+
+
+          <script>
+            function depos() {
+              //var bal = $('.balanc').val();
+              $('#myModal1').modal('show');
+              //alert(bal);
+            }
+
+            function wdw() {
+              var bal = $('.balanc').val();
+
+
+              $('#myModal2').modal('show');
+              $('#c_out').html(bal);
+
+
+              //alert(bal);
+            }
+          </script>
+
+
+
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <div class="alert text-center" style="background:#f7f7f7; color: #025928;">
+                Referral Link: <span style="padding: 10px; border-radius: 8px; font-size: 13px;">https://binarycryptoexchange.com/signup?ref=Flowers </span>
+
+              </div>
+            </div>
+          </div> -->
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container" style="width: 100%; height: 490px;">
+                <iframe allowtransparency="true" frameborder="0"
+                  src="https://www.tradingview-widget.com/embed-widget/crypto-mkt-screener/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A%22490%22%2C%22defaultColumn%22%3A%22overview%22%2C%22screener_type%22%3A%22crypto_mkt%22%2C%22displayCurrency%22%3A%22USD%22%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22market%22%3A%22crypto%22%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22binarycryptoexchange.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22cryptomktscreener%22%7D"
+                  style="box-sizing: border-box; height: calc(458px); width: 100%;"></iframe>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a></div>
+
+                <style>
+                  .tradingview-widget-copyright {
+                    font-size: 13px !important;
+                    line-height: 32px !important;
+                    text-align: center !important;
+                    vertical-align: middle !important;
+                    font-family: 'Trebuchet MS', Arial, sans-serif !important;
+                    color: #9db2bd !important;
+                  }
+
+                  .tradingview-widget-copyright .blue-text {
+                    color: #2196f3 !important;
+                  }
+
+                  .tradingview-widget-copyright a {
+                    text-decoration: none !important;
+                    color: #9db2bd !important;
+                  }
+
+                  .tradingview-widget-copyright a:visited {
+                    color: #9db2bd !important;
+                  }
+
+                  .tradingview-widget-copyright a:hover .blue-text {
+                    color: #38acdb !important;
+                  }
+
+                  .tradingview-widget-copyright a:active .blue-text {
+                    color: #299dcd !important;
+                  }
+
+                  .tradingview-widget-copyright a:visited .blue-text {
+                    color: #2196f3 !important;
+                  }
+                </style>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+
+
+
+
+          </div><!-- row -->
+
+
+        </div><!-- row -->
+
+
+
+      </div><!-- contentpanel -->
+
+    </div><!-- mainpanel -->
+    <!-- mainwrapper -->
+    </section>
+
+    <div id="myModal" class="modal fade bs-example-modal-static" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" style="border-radius: 20px !important; padding: 30px !important;">
+        <div class="">
+          <div class="">
+            <div class="modal-content">
+              <div class="modal-header" style="padding-left: 25px !important; padding-right: 25px !important; border: none !important">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h3 class="modal-title" style="color:#275dd3 !important; font-weight: bold;"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp; Withdrawal Request</h3>
+              </div>
+              <div class="modal-body" style="font-size:18px; padding-left: 25px !important; padding-right: 25px !important; color:#275dd3 !important; font-weight: bold;">
+                <div class="form-group">
+                  <div class="alert alert-danger text-center">
+                    Insufficient Available Balance
+                    <br>
+                    Current Balance: $<b id="a_out"></b>
+                    <br>
+                    <hr>
+                    <a href="deposit_history" class="btn btn-info">View Transaction Status</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="myModal2" class="modal fade bs-example-modal-static" tabindex="-1" role="dialog" data-backdrop="static" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" style="border-radius: 20px !important; padding: 30px !important;">
+        <div class="">
+          <div class="">
+            <div class="modal-content">
+              <div class="modal-header" style="padding-left: 25px !important; padding-right: 25px !important; border: none !important">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h3 class="modal-title" style="color:#275dd3 !important; font-weight: bold;"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp; Withdrawal Request</h3>
+              </div>
+              <div class="modal-body" style="font-size:18px; padding-left: 25px !important; padding-right: 25px !important; color:#275dd3 !important; font-weight: bold;">
+                <div class="form-group" id="withdrawal_msg">
+
+                </div>
+                <div class="form-group" id="otp_msg">
+
+                </div>
+                <div id="otp_out" style="display:none;">
+                  <div class="form-group">
+                    Enter Transaction Token
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="otp_value">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-bordered form-control" id="sub_otp"
+                      style="border:1px solid #275dd3; !important; color:#fff !important; padding: 10px 23px; !important; font-size: 18px; font-weight: bold; background: #275dd3 !important;">Submit</button>
+                  </div>
+                </div>
+                <div id="wdw_form">
+
+                  <div class="form-group">
+                    <label style="color:#275dd3 !important; font-weight: bold;">Widthrawal Option </label>
+                    <select class="form-control" id="w_option" onchange="w_option()">
+                      <option value="btc">BTC Wallet</option>
+                      <option value="dwt">Local Bank Transfer</option>
+
+                    </select>
+                  </div>
+                  <div id="cn">
+                    <div class="form-group">
+                      <label style="color:#275dd3 !important; font-weight: bold;">Amount </label>
+                      <input type="number" class="form-control" id="wdw_amt_btc" name="wdw_amt_btc">
+                      <span id="btc_val"></span>
+                    </div>
+                    <div class="form-group">
+                      <label style="color:#275dd3 !important; font-weight: bold;">Wallet Address </label>
+                      <input type="text" class="form-control" id="wallet_address" name="wallet_address">
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary btn-bordered form-control" id="req_btc"
+                        style="border:1px solid #275dd3; !important; color:#fff !important; padding: 10px 23px; !important; font-size: 18px; font-weight: bold; background: #275dd3 !important;">Request</button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'dashboard/js/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/modernizr.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/pace.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/retina.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/jquery.cookies.js' %}"></script>
+
+    <script src="{% static 'dashboard/js/flot/jquery.flot.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/flot/jquery.flot.resize.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/flot/jquery.flot.spline.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/jquery.sparkline.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/morris.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/raphael-2.1.0.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/bootstrap-wizard.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/select2.min.js' %}"></script>
+
+    <script src="{% static 'dashboard/js/custom.js' %}"></script>
+    <script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+    <script>
+      $('#donee').on('click', function() {
+        //alert('cool');
+        var planne = $('#plan').val();
+        var amount = $('#amount').val();
+        var code = "f1dfb22aaf9c9f1d98d279fe7e2f9c4b";
+        if (planne == '') {
+          $('#out_plan').fadeIn();
+        } else if (amount == '') {
+          $('#out_amount').html('Enter Ammount');
+        } else {
+          var dataString = 'amount=' + amount + '&code=' + code + '&plan=' + planne;
+          $.ajax({
+            url: 'process_dep.php',
+            type: 'post',
+            data: dataString,
+            beforeSend: function() {
+              $('#donee').html('Processing...');
+            },
+            success: function(data) {
+              //swal("Successful!", data, "success");
+              //setTimeout(function(){
+              //   window.location = "transaction_history";
+              //}, 1000);
+              $('#bar_code').html(data);
+              $('#donee').html('Done');
+
+              $("#donee").attr("disabled", true);
+              //window.location = 'home';
+            }
+          });
+
+        }
+      });
+
+      function update_me() {
+
+
+        var code = "f1dfb22aaf9c9f1d98d279fe7e2f9c4b";
+        var dataString = 'code=' + code;
+        $.ajax({
+          url: 'total.php',
+          type: 'post',
+          data: dataString,
+          beforeSend: function() {
+            $('.total').html('<h1 class="mt5 total"><span style="font-size:12px;">Updating Balance</span></h1>');
+          },
+          success: function(data) {
+            $('.total').html('<h1 class="mt5 total">$' + data + '</h1>');
+            $('.total2').html('$' + data);
+            $('.balance').val(data);
+            $('#spin').fadeOut();
+
+          }
+        });
+
+      }
+
+      setInterval(function() {
+        update_me();
+      }, 60000);
+
+
+      $('#req_btc').on('click', function() {
+        var amount_btc = $('#wdw_amt_btc').val();
+        var wallet_address = $('#wallet_address').val();
+        var bal = $('.balance').val();
+        var email = "flowerslillian9@gmail.com";
+
+
+        if (amount_btc == '' || wallet_address == '') {
+          $('#withdrawal_msg').html('<div class="alert alert-danger">Enter Amount and Wallet Address</div>');
+        } else if (Number(amount_btc) > Number(bal)) {
+          $('#withdrawal_msg').html('<div class="alert alert-danger">Insufficient Avaliable Balance<br>Current Balance: <b>$' + bal + '</b></div>');
+        } else {
+          var code = "f1dfb22aaf9c9f1d98d279fe7e2f9c4b";
+
+          var dataString = 'address=' + wallet_address + '&amount=' + amount_btc + '&code=' + code + '&type=btc&email=' + email;
+          $.ajax({
+            url: 'otp_req.php',
+            type: 'post',
+            data: dataString,
+            beforeSend: function() {
+              $('#req_btc').html('<i class="fa fa-circle-o-notch fa-spin" style="font-size:36px;" id="spin"></i> Authenticating..');
+            },
+            success: function(data) {
+              /*$('#withdrawal_msg').html('<div class="alert alert-success" id="time">Attention: OTP Having been sent to your email <b>('+email+')</b></div>');
+              $('#req_btc').html('Request');
+              $('#otp_out').fadeIn('slow');
+              $('#wdw_form').fadeOut('slow');
+
+              setTimeout(function(){
+                  $('#withdrawal_msg').html('');
+              }, 4000);*/
+
+              if (data == 'try_again') {
+                $('#withdrawal_msg').html('<div class="alert alert-error">Try Again....</div>');
+              } else if (data == 'success') {
+                $('#withdrawal_msg').html('<div class="alert alert-success" id="time" style="font-size:14px !important"> Attention: OTP Having been sent to your email <b>(' + email + ')</b></div>');
+                $('#req_btc').html('Request');
+                $('#otp_out').fadeIn('slow');
+                $('#wdw_form').fadeOut('slow');
+
+                setTimeout(function() {
+                  $('#withdrawal_msg').html('');
+                }, 5000);
+              }
+
+              //$('#withdrawal_msg').html(data);
+              //$('#req_btc').html('Request');
+            }
+          });
+        }
+
+      });
+
+
+
+
+
+      $('#sub_otp').on('click', function() {
+        var otp = $('#otp_value').val();
+        //alert(otp);
+        var dataString = 'otp=' + otp;
+        $.ajax({
+          url: 'verify_otp.php',
+          type: 'post',
+          data: dataString,
+          beforeSend: function() {
+            $('#sub_otp').html('<i class="fa fa-circle-o-notch fa-spin" style="font-size:36px;"></i> wait..');
+          },
+          success: function(data) {
+            if (data == 'success') {
+              $('#otp_msg').html(
+                '<div class = "alert alert-success" style="text-align: center; padding-top:5px; padding-bottom:5px; margin-top:-5px;"><a class="close" data-dismiss="alert" aria-label="close">&times;</a><h2>Transaction was Successful</h2><p>Transaction takes 72hrs to reflect to your Wallet Address. Redirecting...<div>'
+              );
+              setInterval(function() {
+                window.location = "withdrawal_records";
+              }, 3000);
+            } else {
+              $('#otp_msg').html(data);
+            }
+
+            $('#sub_otp').html('Submit');
+
+          }
+        });
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <br>
+
+
+
+    <div class="no-mobile d-none d-lg-block">
+      <div class="row">
+        <div class="col-lg-8 hidden-md hidden-xs">
+          <div class="card">
+            <div class="card-block">
+              <b>Market Data Widget</b>
+              <br />
+
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                  {
+                    "width": "700",
+                    "height": "500",
+                    "symbolsGroups": [{
+                        "originalName": "Indices",
+                        "symbols": [{
+                            "displayName": "S&P 500",
+                            "name": "OANDA:SPX500USD"
+                          },
+                          {
+                            "displayName": "Nasdaq 100",
+                            "name": "OANDA:NAS100USD"
+                          },
+                          {
+                            "displayName": "Dow 30",
+                            "name": "FOREXCOM:DJI"
+                          },
+                          {
+                            "displayName": "Nikkei 225",
+                            "name": "INDEX:NKY"
+                          },
+                          {
+                            "displayName": "DAX Index",
+                            "name": "INDEX:DEU30"
+                          },
+                          {
+                            "displayName": "FTSE 100",
+                            "name": "OANDA:UK100GBP"
+                          }
+                        ],
+                        "name": "Indices"
+                      },
+                      {
+                        "originalName": "Commodities",
+                        "symbols": [{
+                            "displayName": "E-Mini S&P",
+                            "name": "CME_MINI:ES1!"
+                          },
+                          {
+                            "displayName": "Euro",
+                            "name": "CME:6E1!"
+                          },
+                          {
+                            "displayName": "Gold",
+                            "name": "COMEX:GC1!"
+                          },
+                          {
+                            "displayName": "Crude Oil",
+                            "name": "NYMEX:CL1!"
+                          },
+                          {
+                            "displayName": "Natural Gas",
+                            "name": "NYMEX:NG1!"
+                          },
+                          {
+                            "displayName": "Corn",
+                            "name": "CBOT:ZC1!"
+                          }
+                        ],
+                        "name": "Commodities"
+                      },
+                      {
+                        "originalName": "Bonds",
+                        "symbols": [{
+                            "displayName": "Eurodollar",
+                            "name": "CME:GE1!"
+                          },
+                          {
+                            "displayName": "T-Bond",
+                            "name": "CBOT:ZB1!"
+                          },
+                          {
+                            "displayName": "Ultra T-Bond",
+                            "name": "CBOT:UB1!"
+                          },
+                          {
+                            "displayName": "Euro Bund",
+                            "name": "EUREX:FGBL1!"
+                          },
+                          {
+                            "displayName": "Euro BTP",
+                            "name": "EUREX:FBTP1!"
+                          },
+                          {
+                            "displayName": "Euro BOBL",
+                            "name": "EUREX:FGBM1!"
+                          }
+                        ],
+                        "name": "Bonds"
+                      },
+                      {
+                        "originalName": "Forex",
+                        "symbols": [{
+                            "name": "FX:EURUSD"
+                          },
+                          {
+                            "name": "FX:GBPUSD"
+                          },
+                          {
+                            "name": "FX:USDJPY"
+                          },
+                          {
+                            "name": "FX:USDCHF"
+                          },
+                          {
+                            "name": "FX:AUDUSD"
+                          },
+                          {
+                            "name": "FX:USDCAD"
+                          }
+                        ],
+                        "name": "Forex"
+                      }
+                    ],
+                    "locale": "en"
+                  }
+                </script>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-4 hidden-md hidden-xs">
+          <div class="card">
+            <div class="card-block">
+              <b>Economic Calender Widget</b>
+              <br />
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                  {
+                    "colorTheme": "light",
+                    "isTransparent": false,
+                    "width": "330",
+                    "height": "500",
+                    "locale": "en",
+                    "importanceFilter": "-1,0,1"
+                  }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  <p align="right" style="font-weight: bold; color:#ffff">All Rights Reserved || 2020</p>
+
+
+
+  <!--[if lt IE 9]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/tether/dist/js/tether.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/modernizr/modernizr.js' %}"></script>
+  <script type="text/javascript" src="https://BitPro.com/assets/user/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/classie/classie.js' %}"></script>
+
+
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/i18next/i18next.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/jquery-i18next/jquery-i18next.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/assets/pages/dashboard/custom-dashboard.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/assets/js/script.js' %}"></script>
+  <script src="{% static 'binaryassets/user/assets/pages/user-profile.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+  <script>
+    new ClipboardJS('.btn');
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#myTable').DataTable({});
+    });
+  </script>
+  </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/607ffdd062662a09efc0aa58/1f3pveu6v';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <!--<a href="https://api.whatsapp.com/send?phone=18176680149" class="float" target="_blank">-->
+  <!--  <i class="icofont icofont-brand-whatsapp icofont-2x my-float"></i>-->
+  <!--</a>-->
+
+
+</body>
+{% endif %}
+
+</html>

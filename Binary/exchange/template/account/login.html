@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+
+<html lang="en">
+
+
+<!-- Mirrored from binarycryptoexchange.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:50:59 GMT -->
+<!-- Added by HTTrack -->
+
+
+	{% include 'header.html' %}
+
+    <!-- Progress  Bar -->
+    <section id="particles-js" class="banner-area">
+      <div class="banner-overlay">
+        <div class="banner-text text-center">
+          <div class="container">
+            <div class="row text-center" id="particles-js">
+              <div class="col-xs-12">
+                <!-- Title Starts -->
+                <h2 class="title-head">User <span>Login</span></h2>
+                <!-- Title Ends -->
+                <div class="banner-title">
+                  <span class="decor-equal"></span>
+                </div>
+                <!-- Breadcrumb Starts -->
+                <ul class="breadcrumb">
+                  <li><a href="{% url 'basic:index' %}"> home</a></li>
+                  <li>Log In</li>
+                </ul>
+                <!-- Breadcrumb Ends -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!--login section start-->
+    <div class="login-section section-padding login-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="main-login main-center">
+              <div class="title_container">
+                <h4>Login Authentication</h4>
+                <span class="decor_default"></span>
+              </div>
+
+              <br>
+
+
+
+              <script language=javascript>
+                function checkform() {
+                  if (document.mainform.username.value == '') {
+                    alert("Please type your username!");
+                    document.mainform.username.focus();
+                    return false;
+                  }
+                  if (document.mainform.password.value == '') {
+                    alert("Please type your password!");
+                    document.mainform.password.focus();
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
+
+
+
+
+
+        
+
+            <form method="post">
+              {% csrf_token %}
+              {{ form|crispy }}
+              <button type="submit" name="button" class="btn btn-primary">Log In</button>
+            </form>
+
+          
+
+          
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--login section end-->
+    <br><br>
+
+
+
+    <!-- Call To Action Section Starts -->
+    <section class="call-action-all">
+      <div class="call-action-all-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- Call To Action Text Starts -->
+              <div class="action-text">
+                <h2>Get Started Today With Bitcoin Investment</h2>
+                <p class="lead">Open account for free and start trading Bitcoins!</p>
+              </div>
+              <!-- Call To Action Text Ends -->
+              <!-- Call To Action Button Starts -->
+              <p class="action-btn"><a class="btn btn-primary" href="{% url 'account_signup' %}">Get Started</a></p>
+              <!-- Call To Action Button Ends -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	{% include 'footer.html' %}
+
+    <!-- Call To Action Section Ends -->
+ <a href="#" id="back-to-top" class="back-to-top fa fa-arrow-up"></a>
+    <!-- Back To Top Ends  -->
+
+
+  </div>
+  <!-- Wrapper Ends -->
+
+
+
+
+  <!-- ======================= Js File ====================== -->
+
+  <!-- j Query -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery-2.1.4.html' %}"></script>
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <!-- appear js -->
+  <script src="{% static 'assets/js/jquery.appear.html' %}"></script>
+  <!-- jQuery ui js -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery-ui.min.html' %}"></script>
+  <!-- count to -->
+  <script src="{% static 'assets/js/jquery.countTo.html' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+  <!-- Template JS Files -->
+  <script src="{% static 'bci-assets/js/jquery-2.2.4.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/select2.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/custom.js' %}"></script>
+
+  <script src="{% static 'bci-assets/js/particle.js' %}"></script>
+  <script src="{% static 'bci-assets/js/active.js' %}"></script>
+
+
+
+  <script type="text/javascript" src="{% static 'bci-assets/js/ion.rangeSlider.js' %}"></script>
+
+  <script>
+    $.each($('.slider-input'), function() {
+      var $t = $(this),
+
+        from = $t.data('from'),
+        to = $t.data('to'),
+
+        $dailyProfit = $($t.data('dailyprofit')),
+        $totalProfit = $($t.data('totalprofit')),
+
+        $val = $($t.data('valuetag')),
+
+        perDay = $t.data('perday'),
+        perYear = $t.data('peryear');
+
+
+      $t.ionRangeSlider({
+        input_values_separator: ";",
+        prefix: '$ ',
+        hide_min_max: true,
+        force_edges: true,
+        onChange: function(val) {
+          $val.val('$ ' + val.from);
+
+          var profit = (val.from * perDay / 100).toFixed(1);
+          profit = '$ ' + profit.replace('.', '.');
+          $dailyProfit.text(profit);
+
+          profit = ((val.from * perDay / 100) * perYear).toFixed(1);
+          profit = '$ ' + profit.replace('.', '.');
+          $totalProfit.text(profit);
+
+        }
+      });
+    });
+    $('.invest-type__profit--val').on('change', function(e) {
+
+      var slider = $($(this).data('slider')).data("ionRangeSlider");
+
+      slider.update({
+        from: $(this).val().replace('$ ', "")
+      });
+    })
+  </script>
+
+  <script>
+    $('#register').on('submit', function(e) {
+      e.preventDefault();
+      var pswd = $('#password').val();
+
+      var username = $('#username').val();
+      $(".submit").attr("disabled", true);
+
+
+      $.ajax({
+        url: 'process_login.php',
+        type: 'post',
+        data: $("#register").serialize(),
+        beforeSend: function() {
+          $('.submit').html('Please wait..');
+          setTimeout(function() {
+            $('.submit').html('Authenticating..');
+          }, 300);
+
+        },
+        success: function(data) {
+          //alert(data);
+          if (data == 'one') {
+
+
+            setTimeout(function() {
+              window.location = 'dashboard/home.html';
+              //window.location = 'success';
+            }, 500);
+          } else if (data == 'two') {
+
+            alert('Invalid Email and Password Combination');
+          } else {
+            alert('Try Again');
+          }
+          $(".submit").removeAttr("disabled", true);
+          $('.submit').html('Log In');
+
+        }
+      });
+
+    });
+  </script>
+
+
+  </div> <!-- End body_wrapper -->
+</body>
+
+
+<!-- Mirrored from binarycryptoexchange.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:51:05 GMT -->
+
+</html>

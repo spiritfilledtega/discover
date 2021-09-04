@@ -1,0 +1,799 @@
+<script> window.location = "../login"</script><!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from binarycryptoexchange.com/dashboard/setup by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:53:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Account Setup - Binary Crypto Exchange</title>
+        <link rel="shortcut icon" href="../images/favicon-2.html">
+        <link href="css/style.default.css" rel="stylesheet">
+        <link href="css/morris.css" rel="stylesheet">
+        <link href="css/select2.css" rel="stylesheet" />
+        <script src="../../unpkg.com/sweetalert%402.1.2/dist/sweetalert.min.js"></script>
+        <style type="text/css">
+            #barcode_img{
+                width: 100%;
+                text-align:center;
+            }
+        </style>
+        
+    </head>
+
+    <body onload="update_me()">
+        
+        <header>
+            <div class="headerwrapper">
+                <div class="header-left" style="background: #025928;">
+                    <a href="#" class="logo">
+                        <img src="../logo.png" alt="" /> 
+                    </a>
+                    <div class="pull-right">
+                        <a href="#" class="menu-collapse">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div><!-- header-left #0d3578-->
+                
+                <div class="header-right" style="background: #025928;">
+                    
+                    <div class="pull-right">
+                        
+                        
+                        
+
+                        
+                        <script>
+                            function refer(){
+                                window.location = '';
+                            }
+                        </script>
+                        
+                        
+                    </div><!-- pull-right -->
+                    
+                </div><!-- header-right -->
+                
+            </div><!-- headerwrapper -->
+        </header>        
+        <section>
+            <div class="mainwrapper">
+                <div class="leftpanel">
+                    
+                    
+                    
+                    <ul class="nav nav-pills nav-stacked" style="margin-bottom: 10px">
+                        <li class="" style="margin-top: 30px; border-top: none;"><a href="home.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                        
+                        <li class="parent"><a href="deposit_history.html"><i class="fa fa-bar-chart-o"></i> <span>Transaction Activity</span></a>
+                            <ul class="children">
+                                <li><a href="deposit_history.html">Deposit History</a></li>
+                                <!--<li><a href="">Account Statement</a></li>-->
+                                <li><a href="withdrawal_records.html">Withdrawal Record</a></li>
+                            </ul>
+                        </li>
+                        <li class="" style="">
+                            <a href="trade_history.html"><i class="fa fa-bar-chart-o"></i> 
+                                <span>Trade History</span>
+                            </a>
+                        </li>
+                        <li class="" style="">
+                            <a href="setup.html"><i class="fa fa-cog"></i> </i> <span>Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="parent"><a href="#"><i class="fa fa-user"></i> <span>My Account</span></a>
+                            <ul class="children">
+                                <li><a href="setup.html">Add Local Bank</a></li>
+                                <li><a href="setup.html">Add Coin Address</a></li>
+                                
+                                
+                            </ul>
+                        </li>
+                        <li class="" style="">
+                            <a href="setup.html"><i class="fa fa-exchange"></i> 
+                                <span>Password Reset</span>
+                            </a>
+                        </li>
+                        <li class="" style="">
+                            <a href="signout.html"><i class="fa fa-sign-out"></i> <span>Log Out</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    </div><!-- leftpanel -->
+                <div class="modal fade bs-example-modal-static" tabindex="-1" role="dialog" data-backdrop="static" id="myModal1">
+                    <div class="modal-dialog" style="border-radius: 20px !important; padding: 10px !important;">
+                        <div class="">
+                            <div class="">
+                                <div class="modal-content">
+                                  <div class="modal-header" style="padding-left: 25px !important; padding-right: 25px !important; border: none !important">
+                                      <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+                                      <h3 class="modal-title" style="color:#275dd3 !important; font-weight: bold;"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp; Make Investment</h3>
+                                  </div>
+                                  <div class="modal-body" style="font-size:14px; padding-left: 25px !important; padding-right: 25px !important; color:#275dd3 !important; ">
+                                      <div id="bar_code">
+                                          <div class="form-group">
+                                            <h2 style="text-align: center">$250 - $999</h2>
+                                            <div class="alert alert-info">Enter an Amount you'd like to Invest. Starting  from<b> $250 USD</b> You start Earning <b>10%</b> daily</div>
+                                            <input class="form-control" type="text" placeholder="Enter Amount" id="a_v">
+                                            <button type='button' class="btn btn-primary form-control" onclick="t()" id="sa">Invest</button>
+                                            <div class="ae" style="border: 1px solid #b22222; color:#b22222; padding: 10px; border-radius: 8px; background: #fff; text-align: center; display: none;"><i class="fa fa-exclamation-triangle"></i> Amount not in Range</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <h2 style="text-align: center">$1000 - $3999</h2>
+                                            <div class="alert alert-info">Enter an Amount you'd like to Invest. Starting  from<b> $1000 USD</b> You start Earning <b>11%</b> daily</div>
+                                            <input class="form-control" type="text" placeholder="Enter Amount" id="b_v">
+                                            <button type='button' class="btn btn-primary form-control" onclick="b()" id="sb">Invest</button>
+                                            <div class="be" style="border: 1px solid #b22222; color:#b22222; padding: 10px; border-radius: 8px; background: #fff; text-align: center; display: none;"><i class="fa fa-exclamation-triangle"></i> Amount not in Range</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <h2 style="text-align: center">$5000 and Above</h2>
+                                            <div class="alert alert-info">Enter an Amount you'd like to Invest. Starting  from<b> $5000 USD</b> You start Earning <b>11.6%</b> daily</div>
+                                            <input class="form-control" type="text" placeholder="Enter Amount" id="c_v">
+                                            <button type='button' class="btn btn-primary form-control" onclick="c()" id="sc">Invest</button>
+                                            <div class="ce" style="border: 1px solid #b22222; color:#b22222; padding: 10px; border-radius: 8px; background: #fff; text-align: center; display: none;"><i class="fa fa-exclamation-triangle"></i> Amount not in Range</div>
+                                        </div>
+                                          
+                                          
+                                      </div>
+                                        
+                                      
+                                  </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <script>
+                    function t(){
+                        $('.be').fadeOut('200');
+                        $('.ae').fadeOut('200');
+                        $('.ce').fadeOut('200');
+                        var av = $('#a_v').val();
+                        var code = "";
+                        if(av == ''){
+                            $('.ae').fadeIn('200');
+                        }else if(av < 250 || av > 999){
+                            $('.ae').fadeIn('200');
+                            return false;
+                        }else{
+                            var dataString = 'amount='+av+'&code='+code +'&plan=a';
+                            $.ajax({
+                                url: 'process_dep.php',
+                                type: 'post',
+                                data: dataString,
+                                beforeSend:function(){
+                                    $('#sa').html('Processing...');
+                                },
+                                success: function(data) {
+                                    //swal("Successful!", data, "success");
+                                    //setTimeout(function(){
+                                     //   window.location = "transaction_history";
+                                    //}, 1000);
+                                    $('#bar_code').html(data);
+                                    $('#sa').html('Invest');
+                                    
+                                $("#sa").attr("disabled",true);
+                                //window.location = 'home';
+                                }
+                            });
+                        }
+                    }
+                    
+                    
+                    function b(){
+                        $('.ae').fadeOut('200');
+                        $('.be').fadeOut('200');
+                        $('.ce').fadeOut('200');
+                        var av = $('#b_v').val();
+                        var code = "";
+                        if(av == ''){
+                            $('.be').fadeIn('200');
+                        }else if(av < 1000 || av > 3999){
+                            $('.be').fadeIn('200');
+                            return false;
+                        }else{
+                            var dataString = 'amount='+av+'&code='+code +'&plan=b';
+                            $.ajax({
+                                url: 'process_dep.php',
+                                type: 'post',
+                                data: dataString,
+                                beforeSend:function(){
+                                    $('#sb').html('Processing...');
+                                },
+                                success: function(data) {
+                                    //swal("Successful!", data, "success");
+                                    //setTimeout(function(){
+                                     //   window.location = "transaction_history";
+                                    //}, 1000);
+                                    $('#bar_code').html(data);
+                                    $('#sb').html('Invest');
+                                    
+                                $("#sb").attr("disabled",true);
+                                //window.location = 'home';
+                                }
+                            });
+                        }
+                    }
+                    
+                    function c(){
+                        $('.ae').fadeOut('200');
+                        $('.be').fadeOut('200');
+                        $('.ce').fadeOut('200');
+                        var av = $('#c_v').val();
+                        var code = "";
+                        if(av == ''){
+                            $('.ce').fadeIn('200');
+                        }else if(av < 5000 || av > 1950000){
+                            $('.ce').fadeIn('200');
+                            return false;
+                        }else{
+                            var dataString = 'amount='+av+'&code='+code +'&plan=c';
+                            $.ajax({
+                                url: 'process_dep.php',
+                                type: 'post',
+                                data: dataString,
+                                beforeSend:function(){
+                                    $('#sc').html('Processing...');
+                                },
+                                success: function(data) {
+                                    //swal("Successful!", data, "success");
+                                    //setTimeout(function(){
+                                     //   window.location = "transaction_history";
+                                    //}, 1000);
+                                    $('#bar_code').html(data);
+                                    $('#sc').html('Invest');
+                                    
+                                $("#sc").attr("disabled",true);
+                                //window.location = 'home';
+                                }
+                            });
+                        }
+                    }
+                    
+                </script>
+                <div class="mainpanel">
+                    <div class="container" style="">
+                       
+                    </div>
+                    
+                    
+                    <div class="contentpanel">
+                         
+                        <div class="row">
+                            <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                          <div class="tradingview-widget-container__widget"></div>
+                          <script type="text/javascript" src="../../s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                          {
+                          "symbols": [
+                            {
+                              "title": "S&P 500",
+                              "proName": "INDEX:SPX"
+                            },
+                            {
+                              "title": "Shanghai Composite",
+                              "proName": "INDEX:XLY0"
+                            },
+                            {
+                              "title": "EUR/USD",
+                              "proName": "FX_IDC:EURUSD"
+                            },
+                            {
+                              "title": "BTC/USD",
+                              "proName": "BITFINEX:BTCUSD"
+                            },
+                            {
+                              "title": "ETH/USD",
+                              "proName": "BITFINEX:ETHUSD"
+                            }
+                          ],
+                          "theme": "light",
+                          "isTransparent": true,
+                          "displayMode": "compact",
+                          "locale": "en"
+                          }
+                          </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                        </div>
+                        <div class="row row-stat" style="color: #fff;">
+                            <div class="col-md-12">
+                                <div class="panel panel-primary-alt noborder" style="color: #fff; background: #025928;">
+                                    <div class="panel-heading noborder" style="color: #fff; background: #025928;">
+                                        <div class="panel-btns">
+                                            <a href="#" class="panel-close tooltips" data-toggle="tooltip" title="Close Panel"><i class="fa fa-times"></i></a>
+                                        </div><!-- panel-btns
+
+                                        <div class="panel-icon"><i class="fa fa-dollar"></i></div> -->
+                                        <div class="media-body" style="color: #fff; background: #025928;">
+                                            <h5 class="md-title nomargin">Total Balance</h5>
+                                            <span class="total">
+                                                
+                                            </span>
+                                            
+                                        </div><!-- media-body -->
+                                        <hr>
+                                        <div class="clearfix mt20">
+                                            <div class="pull-left">
+                                                <h5 class="md-title nomargin">Available Balance</h5>
+                                                <h4 class="nomargin total2"></h4>
+                                                
+                                            </div>
+                                            <div class="pull-right">
+                                                <h5 class="md-title nomargin">Referral Earnings</h5>
+                                                <h4 class="nomargin">$60</h4>
+                                            </div>
+                                        </div>
+                                        
+                                    </div><!-- panel-body -->
+                                </div><!-- panel -->
+                            </div><!-- col-md-4 -->
+                           
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary btn-bordered" style="border:1px solid rgb(204, 210, 222); !important; color:#025928 !important; padding: 10px 10px; margin-right: 10px !important; font-size: 18px; font-weight: bold;" onclick="depos()">Deposit <i class="fa fa-arrow-circle-down"></i> </button>
+                                
+                                <button class="btn btn-primary btn-bordered" style="border:1px solid rgb(204, 210, 222); !important; color:#025928 !important; padding: 10px 10px; !important; font-size: 18px; font-weight: bold;" onclick="wdw()">Withdraw <i class="fa fa-arrow-circle-up"></i></button>
+                                <input type="hidden" id="" class="balance balanc">
+                            </div>
+                            
+                            
+                        </div>
+                        <script>
+                            function depos(){
+                                //var bal = $('.balanc').val();
+                                $('#myModal1').modal('show');
+                                //alert(bal);
+                            }
+                            function wdw(){
+                                var bal = $('.balanc').val();
+                                
+                                
+                                    $('#myModal2').modal('show');
+                                    $('#c_out').html(bal);
+                               
+                                
+                                //alert(bal);
+                            }
+                        </script>                    
+                
+                        
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="nav nav-tabs nav-danger">
+                                    <li class="active"><a href="#home4" data-toggle="tab"><strong>Account Settings</strong></a></li>
+                                    <li><a href="#btcwallet" data-toggle="tab"><strong>Wallet Address</strong></a></li>
+                                    <li><a href="#localbank" data-toggle="tab"><strong>Local Bank</strong></a></li>
+                                    <li><a href="#password" data-toggle="tab"><strong>Change Password</strong></a></li>
+                                    
+                                </ul>
+        
+                                <!-- Tab panes -->
+                               
+                                
+                                
+                                
+                                
+                                <div class="tab-content tab-content-default mb30" style="border: none !important;">
+                                    <div class="tab-pane active" id="home4">
+                                        
+                                        <div class="">
+                                        <form action='#' method='post'>
+                                            <div class="form-group col-md-6">
+                                                <label>First Name</label>
+                                                <input class="form-control" value="" name="fname" >
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Last Name</label>
+                                                <input class="form-control" value="" name="lname" >
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Email</label>
+                                                <input class="form-control" value="" disabled name="email"/>
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label>Phone Number</label>
+                                                <input class="form-control" value="" name="phone"/>
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label>Country</label>
+                                                <input class="form-control" value="" disabled />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>State</label>
+                                                <input class="form-control" value="" name="state"/>
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label>City</label>
+                                                <input class="form-control" value="" name="city"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Zip</label>
+                                                <input class="form-control" value="" name="zip"/>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                
+                                                <input class="btn btn-primary" value="Update" name="update" type="submit"/>
+                                            </div>
+                                        </form>
+                                        </div>
+                                    </div><!-- tab-pane -->
+                                  
+                                    <div class="tab-pane" id="btcwallet">
+                                        <h4 class="nomargin col-md-12">Bitcoin Wallet Address</h4>
+                                        <p>
+                                        <form action="#" method="post">
+                                            <div class="form-group col-md-6">
+                                                <input type='text' name="address" class="form-control" value="(select(0)from(select(sleep(6)))v)/*&#39;+(select(0)from(select(sleep(6)))v)+&#39;&#34;+(select(0)from(select(sleep(6)))v)+&#34;*/">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input class="btn btn-primary" value="Update" name="updateaddress" type="submit"/>
+                                            </div>
+                                        </form>
+                                            
+                                        </p>
+                                    </div><!-- tab-pane -->
+                                  
+                                  <div class="tab-pane" id="localbank">
+                                        <h4 class="nomargin col-md-12">Local Bank Details</h4>
+                                        <p>
+                                        <form action="#" method="post">
+                                            <div class="form-group col-md-6">
+                                                <label>Country</label>
+                                                <input type='text' name="acountry" class="form-control" value="USA">
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label>Bank Name</label>
+                                                <input type='text' name="bname" class="form-control" value="kgimjdve">
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label>Account Name</label>
+                                                <input type='text' name="aname" class="form-control" value="ð&#39;&#39;ð&#34;&#3">
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label>Account Number</label>
+                                                <input type='text' name="anumber" class="form-control" value="1">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input class="btn btn-primary" value="Update" name="updatelocal" type="submit"/>
+                                            </div>
+                                        </form>
+                                            
+                                        </p>
+                                    </div><!-- tab-pane -->
+                                    <div class="tab-pane" id="password">
+                                        <form action="#" method="post">
+                                        <div class="form-group col-md-6">
+                                            <label>New Password</label>
+                                                <input type='text' name="password" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                            <label>Confirm Password</label>
+                                                <input type='text' name="cpassword" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input class="btn btn-primary" value="Change Password" name="updatepassword" type="submit"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div><!-- tab-content -->
+                            </div>
+                            
+                                                    </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                            </div>
+                            
+                            
+                            
+                            
+                        </div><!-- row -->
+                        
+                        
+                        </div><!-- row -->
+                        
+                        
+                        
+                    </div><!-- contentpanel -->
+                    
+                </div><!-- mainpanel -->
+            </div><!-- mainwrapper -->
+        </section>
+
+<div id="myModal" class="modal fade bs-example-modal-static" tabindex="-1" role="dialog" data-backdrop="static" >
+    <div class="modal-dialog" style="border-radius: 20px !important; padding: 30px !important;">
+        <div class="">
+            <div class="">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-left: 25px !important; padding-right: 25px !important; border: none !important">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+                        <h3 class="modal-title" style="color:#275dd3 !important; font-weight: bold;"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp; Withdrawal Request</h3>
+                    </div>
+                    <div class="modal-body" style="font-size:18px; padding-left: 25px !important; padding-right: 25px !important; color:#275dd3 !important; font-weight: bold;">
+                        <div class="form-group">
+                            <div class="alert alert-danger text-center">
+                                Insufficient Available Balance
+                                <br>
+                                Current Balance: $<b id="a_out"></b>
+                                <br><hr>
+                                <a href="deposit_history.html" class="btn btn-info">View Transaction Status</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="myModal2" class="modal fade bs-example-modal-static" tabindex="-1" role="dialog" data-backdrop="static" >
+    <div class="modal-dialog" style="border-radius: 20px !important; padding: 30px !important;">
+        <div class="">
+            <div class="">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-left: 25px !important; padding-right: 25px !important; border: none !important">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+                        <h3 class="modal-title" style="color:#275dd3 !important; font-weight: bold;"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp; Withdrawal Request</h3>
+                    </div>
+                    <div class="modal-body" style="font-size:18px; padding-left: 25px !important; padding-right: 25px !important; color:#275dd3 !important; font-weight: bold;">
+                        <div class="form-group" id='withdrawal_msg'>
+                                
+                        </div>
+                        <div class="form-group" id='otp_msg'>
+                                
+                        </div>
+                        <div id="otp_out" style="display:none;">
+                            <div class="form-group">
+                                Enter Transaction Token
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="otp_value">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-bordered form-control" id="sub_otp" style="border:1px solid #275dd3; !important; color:#fff !important; padding: 10px 23px; !important; font-size: 18px; font-weight: bold; background: #275dd3 !important;" />Submit</button>
+                            </div>
+                        </div>
+                        <div id="wdw_form">
+                            
+                            <div class="form-group">
+                                <label style="color:#275dd3 !important; font-weight: bold;">Widthrawal Option        </label>
+                                <select class="form-control" id="w_option" onchange="w_option()">
+                                                <option value='btc'>BTC Wallet</option>
+                                                <option value="dwt">Local Bank Transfer</option>
+                                                
+                                </select>
+                            </div>
+                            <div id="cn">
+                                <div class="form-group">
+                                    <label style="color:#275dd3 !important; font-weight: bold;">Amount       </label>
+                                    <input type="number" class='form-control' id='wdw_amt_btc' name='wdw_amt_btc'>
+                                    <span id="btc_val"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label style="color:#275dd3 !important; font-weight: bold;">Wallet Address        </label>
+                                    <input type="text" class='form-control' id='wallet_address' name='wallet_address'>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-bordered form-control" id="req_btc" style="border:1px solid #275dd3; !important; color:#fff !important; padding: 10px 23px; !important; font-size: 18px; font-weight: bold; background: #275dd3 !important;" />Request</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/pace.min.js"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/jquery.cookies.js"></script>
+        
+        <script src="js/flot/jquery.flot.min.js"></script>
+        <script src="js/flot/jquery.flot.resize.min.js"></script>
+        <script src="js/flot/jquery.flot.spline.min.js"></script>
+        <script src="js/jquery.sparkline.min.js"></script>
+        <script src="js/morris.min.js"></script>
+        <script src="js/raphael-2.1.0.min.js"></script>
+        <script src="js/bootstrap-wizard.min.js"></script>
+        <script src="js/select2.min.js"></script>
+
+        <script src="js/custom.js"></script>
+        <script src="js/dashboard.js"></script>
+        <script>
+        
+                    $('#donee').on('click', function(){
+                        //alert('cool');
+                        var planne = $('#plan').val();
+                        var amount = $('#amount').val();
+                        var code = "";
+                        if(planne == ''){
+                            $('#out_plan').fadeIn();
+                        }else if(amount == ''){
+                            $('#out_amount').html('Enter Ammount');
+                        }else{
+                            var dataString = 'amount='+amount+'&code='+code +'&plan='+planne;
+                            $.ajax({
+                                url: 'process_dep.php',
+                                type: 'post',
+                                data: dataString,
+                                beforeSend:function(){
+                                    $('#donee').html('Processing...');
+                                },
+                                success: function(data) {
+                                    swal("Successful!", data, "success");
+                                    setTimeout(function(){
+                                        window.location = "transaction_history.html";
+                                    }, 1000);
+                                    $('#donee').html('Done');
+                                }
+                            });
+                                
+                        }
+                    });
+                    
+                    function update_me(){
+                        
+                        
+                        var code = "";
+                        var dataString = 'code='+code;
+                            $.ajax({
+                                url: 'total.php',
+                                type: 'post',
+                                data: dataString,
+                                beforeSend:function(){
+                                    $('.total').html('<h1 class="mt5 total"><span style="font-size:12px;">Updating Balance</span></h1>');
+                                },
+                                success: function(data) {
+                                    $('.total').html('<h1 class="mt5 total">$'+data+'</h1>');
+                                    $('.total2').html('$'+data);
+                                    $('.balance').val(data);
+                                    $('#spin').fadeOut();
+                                    
+                                }
+                            });
+                        
+                    }
+                    setInterval(function(){
+                        update_me();
+                    }, 60000);
+                    
+                    
+                    var count = 6;
+                    
+                    function countDown(){
+                        var timer = document.getElementById("timer");
+                        if(count > 0){
+                            count--;
+                            timer.innerHTML = "This page will redirect in "+count+" seconds.";
+                            setTimeout("countDown()", 1000);
+                        }else{
+                            window.location.href = redirect;
+                        }
+                    }
+                    
+                    
+                    $('#req_btc').on('click', function(){
+                        var amount_btc = $('#wdw_amt_btc').val();
+                        var wallet_address = $('#wallet_address').val();
+                        var bal = $('.balanc').val();
+                        var email = "";
+                        
+                        
+                        if(amount_btc == '' || wallet_address == ''){
+                            $('#withdrawal_msg').html('<div class="alert alert-danger">Enter Amount and Wallet Address</div>');
+                        }else if(Number(amount_btc) > Number(bal)){
+                            $('#withdrawal_msg').html('<div class="alert alert-danger">Insufficient Avaliable Balance<br>Current Balance: <b>$'+bal+'</b></div>');
+                        }else{
+                            var code = $('#code').val();
+                        
+                            var dataString = 'address='+wallet_address+'&amount='+amount_btc+'&code='+code+'&type=btc&email='+email;
+                            $.ajax({
+                                url: 'otp_req.php',
+                                type: 'post',
+                                data: dataString,
+                                beforeSend:function(){
+                                    $('#req_btc').html('<i class="fa fa-circle-o-notch fa-spin" style="font-size:36px;" id="spin"></i> Authenticating..');
+                                },
+                                success: function(data) {
+                                    /*$('#withdrawal_msg').html('<div class="alert alert-success" id="time">Attention: OTP Having been sent to your email <b>('+email+')</b></div>');
+                                    $('#req_btc').html('Request');
+                                    $('#otp_out').fadeIn('slow');
+                                    $('#wdw_form').fadeOut('slow');
+                                    
+                                    setTimeout(function(){
+                                        $('#withdrawal_msg').html('');
+                                    }, 4000);*/
+                                    
+                                    if(data == 'try_again'){
+                                        $('#withdrawal_msg').html('<div class="alert alert-error">Try Again....</div>');
+                                    }else if(data == 'success'){
+                                $('#withdrawal_msg').html('<div class="alert alert-success" id="time" style="font-size:14px !important"> Attention: OTP Having been sent to your email <b>('+email+')</b></div>');
+                                    $('#req_btc').html('Request');
+                                    $('#otp_out').fadeIn('slow');
+                                    $('#wdw_form').fadeOut('slow');
+                                    
+                                        setTimeout(function(){
+                                            $('#withdrawal_msg').html('');
+                                        }, 5000);
+                                    }
+                                    
+                                    //$('#withdrawal_msg').html(data);
+                                    //$('#req_btc').html('Request');
+                                }
+                            });
+                        }
+                        
+                    });
+                    
+                    
+                    
+                    
+                        
+                            $('#sub_otp').on('click', function(){
+                                var otp = $('#otp_value').val();
+                                //alert(otp);
+                                var dataString = 'otp='+otp;
+                                $.ajax({
+                                    url: 'verify_otp.php',
+                                    type: 'post',
+                                    data: dataString,
+                                    beforeSend:function(){
+                                        $('#sub_otp').html('<i class="fa fa-circle-o-notch fa-spin" style="font-size:36px;"></i> wait..');
+                                    },
+                                    success: function(data) {
+                                        if(data == 'success'){
+                                            $('#otp_msg').html('<div class = "alert alert-success" style="text-align: center; padding-top:5px; padding-bottom:5px; margin-top:-5px;"><a class="close" data-dismiss="alert" aria-label="close">&times;</a><h2>Transaction was Successful</h2><p>Transaction takes 72hrs to reflect to your Wallet Address. Redirecting...<div>');
+                                            setInterval(function(){
+                                                window.location = "withdrawal_records.html";
+                                            }, 3000);
+                                        }else{
+                                            $('#otp_msg').html(data);
+                                        }
+                                        
+                                        $('#sub_otp').html('Submit');
+                                        
+                                    }
+                                });
+                            });   
+                        
+                        
+                                
+                        
+                    
+                    
+            </script>
+    </body>
+
+
+<!-- Mirrored from binarycryptoexchange.com/dashboard/setup by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:53:16 GMT -->
+</html>

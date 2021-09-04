@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+
+    <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('x75zz6kcbwxs');
+</script>
+<!-- End of Async Drift Code -->
+
+
+    <style>
+        body p::before {
+            color:#3e3be3;
+        }
+
+        .price-table .price-table-header::after {
+            border-top: 34px solid #3e3be3;
+        }
+
+        body.light .bitcoin-calculator .form-input{
+            background-color:#3e3be3;
+        }
+
+        .price-table .price-table-header::before {
+            border-top: 34px solid #3e3be3;
+        }
+    </style>
+
+<style>
+    body .btn-primary {
+        background-color: #3e3be3;
+        border-color: #3e3be3;
+        color: #FFF; }
+    body .btn-primary:hover, body .btn-primary:focus {
+        border-color: #3e3be3;
+        background-color: #3e3be3;
+        color: #FFF; }
+    body .btn-primary:active, body .btn-primary:visited, body .btn-primary:active:focus, body .btn-primary:active:hover {
+        border-color: #3e3be3;
+        background-color:#3e3be3;
+        color: #FFF; }
+
+      }
+</style>
+
+<style>
+  .customer_carousel .owl-stage-outer {
+    padding: 20px 0;
+  }
+
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  element {}
+
+  .owl-carousel .owl-item img {
+
+    display: block;
+    width: 100%;
+
+  }
+
+  .customer_feedback_block>span img {
+
+    display: inline-block;
+    width: auto !important;
+    border-radius: 50%;
+
+  }
+
+  .carousel-inner>.item>a>img,
+  .carousel-inner>.item>img,
+  .img-responsive,
+  .thumbnail a>img,
+  .thumbnail>img {
+
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  img {
+
+    vertical-align: middle;
+
+  }
+
+  img {
+
+    border: 0;
+
+  }
+</style>
+
+
+<style>
+
+.slider.btn-primary:hover, .slider.btn-primary:active, .slider.btn-primary:focus {
+  color: #3e3be3;
+
+  .pricing-header {
+  position: relative;
+  z-index: 1;
+  height: 80px;
+  padding: 16px;
+  pointer-events: none;
+  background-color: #3e3be3;
+  color: #FFFFFF;
+}
+
+.bitcoin-calculator-section .container {
+  background: #1d1d1d;
+  width: 1140px;
+  height: 358px;
+  margin-top: -130px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid #3e3be3;
+  border-radius: 5px;
+}
+
+.our-plan .section-title h2 {
+  color: #3e3be3;
+}
+
+.price-table-header {
+  padding: 10px 10px;
+  background: #3e3be3;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-top-left-radius: 20px;
+  -ms-border-top-left-radius: 20px;
+  -o-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-top-right-radius: 20px;
+  -ms-border-top-right-radius: 20px;
+  -o-border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.price-table-body {
+  border-bottom: 3px solid #3e3be3;
+  background: #1D1D1D;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 50px 20px;
+}
+
+.price-table-body p {
+  padding: 5px 10px;
+  border-bottom: 1px solid #3e3be3;
+  margin-bottom: 7px;
+}
+
+.pricebar:before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #3e3be3;
+  top: 0;
+  left: 0;
+  content: "";
+  border-radius: 10px;
+}
+
+
+.pricebar:after {
+  position: absolute;
+  left: 48%;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  background: #3e3be3;
+  content: "";
+  border-radius: 50%;
+}
+
+.boxed-btn {
+  display: inline-block;
+  padding: 7px 25px;
+  background: #3e3be3;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: .5s;
+}
+
+table.table.main-table tr:nth-child(1) {
+  color: #3e3be3;
+}
+
+.price-table-header:after {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -34px;
+  height: 10px;
+  content: "";
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-top: 34px solid #3e3be3;
+}
+
+.contact-details i {
+  color: #3e3be3;
+}
+
+.discunt-text {
+  background: #3e3be3;
+  -webkit-border-top-right-radius: 85px;
+  -moz-border-top-right-radius: 85px;
+  -ms-border-top-right-radius: 85px;
+  -o-border-top-right-radius: 85px;
+  border-top-right-radius: 85px;
+  -webkit-border-bottom-left-radius: 85px;
+  border-bottom-left-radius: 85px;
+  -moz-border-radius-bottomleft: 85px;
+  /* FF 1.0 - 12.0 */
+  margin-left: -180px;
+  padding: 50px;
+}
+
+
+</style>
+
+<!-- Header Starts -->
+
+<!-- Mirrored from binarycryptoexchange.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:48:05 GMT -->
+<!-- Added by HTTrack -->
+
+{% include 'header.html' %}
+
+<!-- Header Ends -->
+
+
+<style>
+      #main-slide .item.item-1 {
+  background-image: url('static/bci-assets/images/slider/tradeeight.jpeg');
+}
+
+#main-slide .item.item-2 {
+  background-image: url('static/bci-assets/images/slider/cryptic3.jpeg');
+}
+    </style>
+
+
+
+<!-- Slider Starts -->
+<div id="main-slide" class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- Indicators Starts -->
+  <ol class="carousel-indicators visible-lg visible-md">
+    <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+    <li data-target="#main-slide" data-slide-to="1"></li>
+    <li data-target="#main-slide" data-slide-to="2"></li>
+  </ol>
+  <!-- Indicators Ends -->
+  <!-- Carousel Inner Starts -->
+  <div class="carousel-inner">
+    <!-- Carousel Item Starts -->
+    <div class="item active bg-parallax item-1">
+      <div class="slider-content">
+        <div class="container">
+          <div class="slider-text text-center cd-intro-content scale">
+
+            <h3 class="slide-title"><span style="color:#3e3be3">A UNIQUE</span> WAY TO <span style="color:#3e3be3">BE A PART OF</span><br /> BITCOIN MINING</h3>
+            <p>
+              <a href="{% url 'basic:about' %}" class="slider btn btn-primary" onMouseOver="this.style.color='#3e3be3'" onMouseOut="this.style.color='white'">Learn more</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel Item Ends -->
+    <!-- Carousel Item Starts -->
+    <div class="item bg-parallax item-2">
+      <div class="slider-content">
+        <div class="col-md-12">
+          <div class="container">
+            <div class="slider-text text-center cd-intro-content scale">
+
+              <h3 class="slide-title"><span style="color:#3e3be3" >10 YEARS+</span> OF WORKING <br />AND STILL <span style="color:#3e3be3">PAYING</span> </h3>
+              <p>
+                <a href="{% url 'account_signup' %}" class="slider btn btn-primary" onMouseOver="this.style.color='#3e3be3'" onMouseOut="this.style.color='white'">Get Started</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel Item Ends -->
+  </div>
+  <!-- Carousel Inner Ends -->
+  <!-- Carousel Controlers Starts -->
+  <a class="left carousel-control" href="#main-slide" data-slide="prev">
+    <span><i class="fa fa-angle-left" style="color:#3e3be3"></i></span>
+  </a>
+  <a class="right carousel-control" href="i.html#main-slide" data-slide="next">
+    <span><i class="fa fa-angle-right" style="color:#3e3be3"></i></span>
+  </a>
+  <!-- Carousel Controlers Ends -->
+</div>
+<!-- Slider Ends -->
+<!-- Features Section Starts -->
+<section class="features">
+  <div class="container">
+    <div class="row features-row">
+      <!-- Feature Box Starts -->
+      <div class="feature-box col-md-4 col-sm-12">
+        <span class="feature-icon">
+          <img src="{% static 'bci-assets/images/icons/orange/download-bitcoin.png' %}" alt="download bitcoin">
+        </span>
+        <div class="feature-box-content">
+          <h3>Download Bitcoin Wallet</h3>
+          <p>Get it on PC or Mobile to create, send and receive bitcoins.</p>
+        </div>
+      </div>
+      <!-- Feature Box Ends -->
+      <!-- Feature Box Starts -->
+      <div class="feature-box two col-md-4 col-sm-12">
+        <span class="feature-icon">
+          <img src="{% static 'bci-assets/images/icons/orange/add-bitcoins.png' %}" alt="add bitcoins">
+        </span>
+        <div class="feature-box-content">
+          <h3>Add Funds & Start Investment</h3>
+          <p>Add bitcoins you've created or exchanged via credit card.</p>
+        </div>
+      </div>
+      <!-- Feature Box Ends -->
+      <!-- Feature Box Starts -->
+      <div class="feature-box three col-md-4 col-sm-12">
+        <span class="feature-icon">
+          <img src="{% static 'bci-assets/images/icons/orange/buy-sell-bitcoins.png' %}" alt="buy and sell bitcoins">
+        </span>
+        <div class="feature-box-content">
+          <h3>Withdraw Your Profit</h3>
+          <p>Request for withdrawal and receive it within 1day</p>
+        </div>
+      </div>
+      <!-- Feature Box Ends -->
+    </div>
+  </div>
+</section>
+<!-- Features Section Ends -->
+<!-- About Section Starts -->
+<section class="about-us">
+  <div class="container">
+    <!-- Section Title Starts -->
+    <div class="row text-center">
+      <h2 class="title-head">About <span style="color:#3e3be3">Us</span></h2>
+      <div class="title-head-subtitl" style="color:#3e3be3">
+        <p> <strong> <span style="text-align:center; color:blue; margin: 1.2%;"> -----  </span> </strong> Most Flexible Cryptocurrency Investment Company <strong> <span style="text-align:center; color:blue; margin: 1.2%;"> -----  </span> </strong> </p>
+      </div>
+    </div>
+    <!-- Section Title Ends -->
+    <!-- Section Content Starts -->
+    <div class="row about-content">
+      <!-- Image Starts -->
+      <div class="col-sm-12 col-md-5 col-lg-6 text-center">
+        <div class="company_certificate">
+          <span>
+
+            <a href="#" class="example-image-link" data-lightbox="example-1">
+              <img src="{% static 'company_certificate.jpg' %}" alt="certificate" class="img-responsive" />
+            </a>
+
+            <b>Certificate<span><a href="#" style="color:#230241;text-decoration:underline;">#119831027</a></span></b></span></a>
+
+        </div>
+      </div>
+      <!-- Image Ends -->
+      <!-- Content Starts -->
+      <div class="col-sm-12 col-md-7 col-lg-6">
+        <h3 class="title-about"> WE ARE BINARY EXCHANGE OPTIONS.</h3>
+
+
+        <p class="about-text">binary exchange options Investments Ltd is a distinctive investment company offering investors access to investment opportunities in Binary option trading, cryptocurrency (bitcoin,ethereum etc...) markets and other
+          services.</p>
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#menu1" style="color:#3e3be3">Our Mission</a></li>
+          <li><a data-toggle="tab" href="#menu2">Our advantages</a></li>
+          <li><a data-toggle="tab" href="#menu3">Our guarantees</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="menu1" class="tab-pane fade in active">
+            <p>Our aim is to utilize our expertise & knowledge to benefit our clients and the users of our services across the globe.</p>
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <p>As an official partner of the Bitcoin Foundation, we help you to enter and better understand the world of cryptocurrencies mining and trading and how to be a part of it without the high cost of setting up a mining rig.</p>
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <p>With over 3 years of excellent service, we are passionate about open, transparent markets and aim to be a major driving force in widespread adoption. We are one the best in the world of cryptocurrency investment. </p>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="{% url 'basic:about' %}">Read More</a>
+      </div>
+      <!-- Content Ends -->
+    </div>
+    <!-- Section Content Ends -->
+  </div>
+</section>
+<!-- About Section Ends -->
+<!-- Features and Video Section Starts -->
+<section class="image-block">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Features Starts -->
+      <div class="col-md-8 ts-padding img-block-left">
+        <div class="gap-20"></div>
+        <div class="row">
+          <!-- Feature Starts -->
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <div class="feature text-center">
+              <span class="feature-icon">
+                <img src="{% static 'bci-assets/images/icons/orange/strong-security.png' %}" alt="strong security" />
+              </span>
+              <h3 class="feature-title">Strong Security</h3>
+              <p>Protection against DDoS attacks, <br>full data encryption</p>
+            </div>
+          </div>
+          <!-- Feature Ends -->
+          <div class="gap-20-mobile"></div>
+          <!-- Feature Starts -->
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <div class="feature text-center">
+              <span class="feature-icon">
+                <img src="{% static 'bci-assets/images/icons/orange/world-coverage.png' %}" alt="world coverage" />
+              </span>
+              <h3 class="feature-title">World Coverage</h3>
+              <p>Providing services in 99% countries<br> around all the globe</p>
+            </div>
+          </div>
+          <!-- Feature Ends -->
+        </div>
+        <div class="gap-20"></div>
+        <div class="row">
+          <!-- Feature Starts -->
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <div class="feature text-center">
+              <span class="feature-icon">
+                <img src="{% static 'bci-assets/images/icons/orange/payment-options.png' %}" alt="payment options" />
+              </span>
+              <h3 class="feature-title">Payment Options</h3>
+              <p>Popular methods: Bitcoin, Ethereum, <br>Skril</p>
+            </div>
+          </div>
+          <!-- Feature Ends -->
+          <div class="gap-20-mobile"></div>
+          <!-- Feature Starts -->
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <div class="feature text-center">
+              <span class="feature-icon">
+                <img src="{% static 'bci-assets/images/icons/orange/mobile-app.png' %}" alt="mobile app" />
+              </span>
+              <h3 class="feature-title">Mobile Friendly</h3>
+              <p>Our User Dashboard is Made<br> to match all Mobile resultions</p>
+            </div>
+          </div>
+          <!-- Feature Ends -->
+        </div>
+        <div class="gap-20"></div>
+        <div class="row">
+          <!-- Feature Starts -->
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <div class="feature text-center">
+              <span class="feature-icon">
+                <img src="{% static 'bci-assets/images/icons/orange/cost-efficiency.png' %}" alt="cost efficiency" />
+              </span>
+              <h3 class="feature-title">Cost efficiency</h3>
+              <p>Reasonable trading fees for takers<br> and all market makers</p>
+            </div>
+          </div>
+          <!-- Feature Ends -->
+          <div class="gap-20-mobile"></div>
+          <!-- Feature Starts -->
+          <div class="col-sm-6 col-md-6 col-xs-12">
+            <div class="feature text-center">
+              <span class="feature-icon">
+                <img src="{% static 'bci-assets/images/icons/orange/high-liquidity.png' %}" alt="high liquidity" />
+                  </span>
+                  <h3 class="feature-title">High Liquidity</h3>
+                  <p>Fast access to high liquidity orderbook<br> for top currency pairs</p>
+                </div>
+              </div>
+              <!-- Feature Ends -->
+            </div>
+          </div>
+          <!-- Features Ends -->
+          <!-- Video Starts -->
+          <div class="col-md-4 ts-padding bg-image-1">
+            <div>
+              <div class="text-center">
+                <a class="button-video mfp-youtube" href="externalcbb2cbb2.html?link=https://www.youtube.com/watch?v=GmOzih6I1zs"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Video Ends -->
+        </div>
+      </div>
+    </section>
+    <!-- Features and Video Section Ends -->
+    <!-- Pricing Starts -->
+
+
+
+
+
+    <!-- Pricing Starts -->
+    <section class="pricing">
+      <div class="container">
+        <!-- Section Title Starts -->
+        <div class="row text-center">
+          <h2 class="title-head">affordable <span style="color:#3e3be3">packages</span></h2>
+          <div class="title-head-subtitl">
+            <p> <strong> <span style="text-align:center; color:blue; margin: 1.2%;"> -----  </span> </strong> Choose your preferable plan for investment. <strong> <span style="text-align:center; color:blue; margin: 1.2%;"> -----  </span> </strong> </p>
+          </div>
+        </div>
+        <!-- Section Title Ends -->
+        <!-- Section Content Starts -->
+        <div class="row pricing-tables-content">
+          <div class="pricing-container">
+            <!-- Pricing Switcher Starts -->
+
+            <!-- Pricing Switcher Ends -->
+
+
+
+
+
+            <!--Our Plan section start-->
+            <section class="section-padding our-plan" id="investment">
+              <div class="container">
+
+                <div class="row">
+
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="price-table text-center">
+                      <div class="price-table-header" style="background-color:#3e3be3">
+                        <h4>PLAN 1</h4>
+                        <h5>10% PER DAY RETURN</h5>
+                      </div>
+                      <div class="price-table-body" style="border-bottom: 3px solid #3e3be3">
+                        <p style="border-bottom: 1px solid #3e3be3"> <span class="color-text">WEEKLY</span> RETURN</p>
+                        <!-- <p>WEEKENDS <span class="color-text">ARE</span> EXCLUDED</p> -->
+                        <p style="border-bottom: 1px solid #3e3be3"> <span class="color-text">50%</span> RETURN EACH WEEK</p>
+                        <div class="price-range">
+                          <div class="row">
+                            <div class="col-md-6 text-left col-sm-6 col-xs-6">
+                              <div class="min-price">
+                                <h6>Minimum<span class="color-text">$300</span></h6>
+                              </div>
+                            </div>
+                            <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                              <div class="min-price">
+                                <h6>Maximum<span class="color-text">$999</span></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="invest-type__profit plan__value--1">
+                          <input type="text" value="$ 300" class="custom-input invest-type__profit--val" data-slider=".slider-input--1">
+                          <input type="hidden" name="amount" value="300" class=" slider-input slider-input--1" data-perday="10" data-peryear="1" data-min="300" data-max="999" data-dailyprofit=".daily-profit-1" data-totalprofit=".total-profit-1 "
+                            data-valuetag=".plan__value--1 .invest-type__profit--val" />
+                        </div>
+                        <input type="hidden" name="plan_id" value="1">
+                        <div class="price-range">
+                          <div class="row">
+                            <div class="col-md-6 text-left col-sm-6 col-xs-6 invest-type__calc invest-type__calc--daily">
+                              <div class="min-price">
+                                <h6>Profit<span class="color-text"><b class="daily-profit-1"></b></span></h6>
+                              </div>
+                            </div>
+                            <div class="col-md-6 text-right col-sm-6 col-xs-6 invest-type__calc invest-type__calc--total">
+                              <div class="min-price">
+                                  <h6><a href="https://www.coinbase.com/"><b style="color:#3e3be3">BUY BITCOIN</b></a></h6>
+                                <!--<h6>Total Return<span class="color-text"><b class="total-profit-1"></b></span></h6>-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price-table-footer">
+                        <a href="{% url 'account_signup' %}" class="boxed-btn" style="background-color:#3e3be3">sign up</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="price-table text-center">
+                      <div class="price-table-header" style="background-color:#3e3be3">
+                        <h4>PLAN 2</h4>
+                        <h5>11% PER DAY RETURN</h5>
+                      </div>
+                      <div class="price-table-body" style="border-bottom: 3px solid #3e3be3">
+                        <p style="border-bottom: 1px solid #3e3be3"> <span class="color-text">WEEKLY</span> RETURN</p>
+                        <!-- <p>WEEKENDS <span class="color-text">ARE</span> EXCLUDED</p> -->
+                        <p style="border-bottom: 1px solid #3e3be3"> <span class="color-text">55%</span> RETURN EACH WEEK</p>
+                        <div class="price-range">
+                          <div class="row">
+                            <div class="col-md-6 text-left col-sm-6 col-xs-6">
+                              <div class="min-price">
+                                <h6>Minimum<span class="color-text">$1000</span></h6>
+                              </div>
+                            </div>
+                            <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                              <div class="min-price">
+                                <h6>Maximum<span class="color-text">$4999</span></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="invest-type__profit plan__value--2">
+                          <input type="text" value="$ 2500" class="custom-input invest-type__profit--val" data-slider=".slider-input--2">
+                          <input type="hidden" name="amount" value="1000" class=" slider-input slider-input--2" data-perday="22" data-peryear="1" data-min="1000" data-max="4999" data-dailyprofit=".daily-profit-2" data-totalprofit=".total-profit-2 "
+                            data-valuetag=".plan__value--2 .invest-type__profit--val" />
+                        </div>
+                        <input type="hidden" name="plan_id" value="2">
+                        <div class="price-range">
+                          <div class="row">
+                            <div class="col-md-6 text-left col-sm-6 col-xs-6 invest-type__calc invest-type__calc--daily">
+                              <div class="min-price">
+                                <h6>profit<span class="color-text"><b class="daily-profit-2"></b></span></h6>
+                              </div>
+                            </div>
+                            <div class="col-md-6 text-right col-sm-6 col-xs-6 invest-type__calc invest-type__calc--total">
+                              <div class="min-price">
+                                <h6><a href="https://www.coinbase.com/"><b style="color:#3e3be3">BUY BITCOIN</b></a></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price-table-footer">
+                        <a href="{% url 'account_signup' %}" class="boxed-btn" style="background-color:#3e3be3">sign up</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="price-table text-center">
+                      <div class="price-table-header" style="background-color:#3e3be3">
+                        <h4>PLAN 3</h4>
+                        <h5>11.6% PER DAY RETURN</h5>
+                      </div>
+                      <div class="price-table-body" style="border-bottom: 3px solid #3e3be3">
+                        <p style="border-bottom: 1px solid #3e3be3"> <span class="color-text">WEEKLY</span> RETURN</p>
+                        <!-- <p>WEEKENDS <span class="color-text">ARE</span> EXCLUDED</p> -->
+                        <p style="border-bottom: 1px solid #3e3be3"> <span class="color-text">60%</span> RETURN EACH WEEK</p>
+                        <div class="price-range">
+                          <div class="row">
+                            <div class="col-md-6 text-left col-sm-6 col-xs-6">
+                              <div class="min-price">
+                                <h6>Minimum<span class="color-text">$5000</span></h6>
+                              </div>
+                            </div>
+                            <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                              <div class="min-price">
+                                <h6>Maximum<span class="color-text">$ 1950000</span></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="invest-type__profit plan__value--3">
+                          <input type="text" value="$ 5000" class="custom-input invest-type__profit--val" data-slider=".slider-input--3">
+                          <input type="hidden" name="amount" value="5500" class=" slider-input slider-input--3" data-perday="35" data-peryear="1" data-min="5000" data-max="1950000" data-dailyprofit=".daily-profit-3"
+                            data-totalprofit=".total-profit-3 " data-valuetag=".plan__value--3 .invest-type__profit--val" />
+                        </div>
+                        <input type="hidden" name="plan_id" value="3">
+                        <div class="price-range">
+                          <div class="row">
+                            <div class="col-md-6 text-left col-sm-6 col-xs-6 invest-type__calc invest-type__calc--daily">
+                              <div class="min-price">
+                                <h6>profit<span class="color-text"><b class="daily-profit-3"></b></span></h6>
+                              </div>
+                            </div>
+                            <div class="col-md-6 text-right col-sm-6 col-xs-6 invest-type__calc invest-type__calc--total">
+                              <div class="min-price">
+                                <h6><a href="https://www.coinbase.com/"><b style="color:#3e3be3">BUY BITCOIN</b></a></h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price-table-footer">
+                        <a href="{% url 'account_signup' %}" class="boxed-btn" style="background-color:#3e3be3">sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </section>
+            <!--Our Plan section end-->
+
+
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="price-table text-center">
+              <div class="price-table-header" style="background-color:#3e3be3">
+                <h4>LONG TERM PLANS ARE EXCLUSIVELY FOR OLD INVESTORS</h4><br />
+                <h5>40% EVERY 72HOURS</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Pricing Ends -->
+
+
+
+    <!-- Pricing Ends -->
+    <!-- Bitcoin Calculator Section Starts -->
+    <section class="bitcoin-calculator-section">
+      <div class="container" style="border: 1px solid #3e3be3">
+        <div class="row">
+          <!-- Section Heading Starts -->
+          <div class="col-md-12">
+            <h2 class="title-head text-center"><span style="color:#3e3be3">Bitcoin</span> Calculator</h2>
+            <p class="message text-center">Find out the current Bitcoin value with our easy-to-use converter</p>
+          </div>
+          <!-- Section Heading Ends -->
+          <!-- Bitcoin Calculator Form Starts -->
+          <div class="col-md-12 text-center">
+            <form class="bitcoin-calculator" id="bitcoin-calculator">
+              <!-- Input #1 Starts -->
+              <!--style="border: 1px solid #3e3be3"-->
+              <input class="form-input" name="btc-calculator-value" value="1">
+              <!-- Input #1 Ends -->
+              <!--style="border: 1px solid #3e3be3"-->
+              <div class="form-info"><i class="fa fa-bitcoin"></i></div>
+              <div class="form-equal">=</div>
+              <!-- Input/Result Starts -->
+              <!--style="border:1px solid #3e3be3"-->
+              <input class="form-input form-input-result" name="btc-calculator-result">
+              <!-- Input/Result Ends -->
+              <!-- Select Currency Starts -->
+              <div class="form-wrap" style="background-color:#3e3be3">
+                <select id="currency-select"  class="form-input select-currency select-primary" name="btc-calculator-currency" data-dropdown-class="select-primary-dropdown" onMouseOver="this.style.color='#3e3be3'" ></select>
+              </div>
+              <!-- Select Currency Ends -->
+            </form>
+            <p class="info"><i>* Data updated every 15 minutes</i></p>
+          </div>
+          <!-- Bitcoin Calculator Form Ends -->
+        </div>
+      </div>
+    </section>
+    <!-- Bitcoin Calculator Section Ends -->
+    <!-- Quote and Chart Section Starts -->
+    <section class="image-block2">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Quote Starts -->
+          <div class="col-md-4 img-block-quote bg-image-2">
+            <blockquot>
+              <p  style="color:white">Bitcoin is one of the most important inventions in all of human history. For the first time ever, anyone can send or receive any amount of money with anyone else, anywhere on the planet, conveniently and without restriction. It's the
+                dawn of a better, more free world.</p>
+              <footer><img src="{% static 'bci-assets/images/team/AR-801257734.jpg' %}" alt="ceo" /> <br /><span style="color:white">O smitha</span> - Analyst</footer>
+                </blockquote>
+            </div>
+            <!-- Quote Ends -->
+            <!-- Chart Starts -->
+            <div class="col-md-8 bg-grey-chart">
+              <div class="chart-widget dark-chart chart-1">
+                <div>
+                  <div class="btcwdgt-chart" data-bw-theme="dark"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Chart Ends -->
+          </div>
+        </div>
+</section>
+<!-- Quote and Chart Section Ends -->
+<!-- Call To Action Button Starts -->
+<p class="action-btn"><a class="btn btn-primary" href="{% url 'account_signup' %}">Get Started</a></p>
+<!-- Call To Action Button Ends -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call To Action Section Ends -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="main_title text-center mb-30">
+      <h2 class="text-yellow">INVESTORS FEEDBACKS</h2>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" style="padding: 0 100px;">
+    <div class="customer_carousel owl-carousel owl-theme">
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b3.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Heard quite a number of people testifying on how they make money weekly from this page. I didn’t believe at first but wow, oh wow!</p>
+        <h5 style="color: #4eb2e0;">Cyla<span> Mosiah</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b4.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Can’t explain how I feel when I receive my profit from your company. I’m getting the result in flying colour. What can I say, you’ve done great things in my life.</p>
+        <h5 style="color: #4eb2e0;">Graysan<span> Zaley</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b5.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>My heart is full of joy all because of your trade option. I just made a successful withdrawal, no more pending withdrawal, always successful.</p>
+        <h5 style="color: #4eb2e0;">Marque<span> Jesse</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b6.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>I’m never gonna hesitate to invest in bitcoin trade because I have found an honest investment platform.</p>
+        <h5 style="color: #4eb2e0;">Dari<span> Zymeer</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b7.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>My life has been extremely great since I started investing in bitcoin and I have earned thousands of dollars of which I am very happy. It started with doubts but I’m giving my testimony.</p>
+        <h5 style="color: #4eb2e0;">Cormac<span> Averleigh</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b8.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Binary investments is now my biggest source of earning money, all things just works so easy.</p>
+        <h5 style="color: #4eb2e0;">Yaeli<span> Beckley</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b9.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Investing here is the best choice I’ve ever made. My $500 is now $5700!</p>
+        <h5 style="color: #4eb2e0;">Halston<span> Madely</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b10.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>I just got my profit after 7 days of investing, was a very happy moment for me. Keep up the good work!</p>
+        <h5 style="color: #4eb2e0;">Brittain<span> Dhruvi</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b2.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>I just made $5900, unbelievable!!</p>
+        <h5 style="color: #4eb2e0;">Analeya<span> Svojas</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b1.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>At first I was sceptical about the whole binary exchange option thing. I couldn’t have believed it until I gave it a try, but now I get paid on a daily basis. This is the real deal right here.</p>
+        <h5 style="color: #4eb2e0;">Tahir<span> Margaret</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b11.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>My life has been all the more better ever since I started investing in cryptocurrency. Making more than I anticipated even.</p>
+        <h5 style="color: #4eb2e0;">Goldi<span> Levitt</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b12.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Awesome website, great trading platform, amazing profits and easy withdrawals. Thumbs up.</p>
+        <h5 style="color: #4eb2e0;">Ronika<span> Jahaziah</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/m9.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Bitcoin is definitely the future. I made about $11,430 within a week with an investment of $4000 from bitcoin investment!</p>
+        <h5 style="color: #4eb2e0;">Tammy<span> Maliha</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b14.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Its been a wonderful year to me. Thank you kindly, I just got 713,100 rupees</p>
+        <h5 style="color: #4eb2e0;">Cairo<span> Paula</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b15.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>I feel very safe again to grow and invest my Bitcoin now that I've found a good trading website that I trust for the first time in a while I feel so grateful and happy </p>
+        <h5 style="color: #4eb2e0;">Sofiana<span> Stuti</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b16.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Waking up everyday to see another withdrawal notification on my mail is the best thing I have ever wished for. This site rocks!</p>
+        <h5 style="color: #4eb2e0;">Mylon<span> Drayl</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/b17.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Investing for the first time, was a big discussion I had to take, but I’m happy it all worked out. Now I get paid regularly. Thank you for your hard work and consistency.</p>
+        <h5 style="color: #4eb2e0;">Nachman<span> Emmelina</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/f10.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>I decided to sign up on a whim, and I’ve made $10,000+ just this month.</p>
+        <h5 style="color: #4eb2e0;">Kasandra<span> Samhita</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/f11.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Been investing cryptocurrency for a while now, and I’ll have to say, this is the best trading platform I’ve come across so far.</p>
+        <h5 style="color: #4eb2e0;">Adilyn<span> Alyanah</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/m10.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Withdrawal successful? In just two days?? Where has this website been all my life??!</p>
+        <h5 style="color: #4eb2e0;">Crosley<span> Winona</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/f12.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p> Couldn’t imagine my self believing in crypto and bitcoin, but you have to give some things a trial and I found out bitcoin as an investment. Very amazing return of $9,050 in a week.</p>
+        <h5 style="color: #4eb2e0;">Niylah<span> Jovany</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/m11.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>Wow. Never thought I could be earning this much from bitcoin investment. Now I know what all the fuss about bitcoin is about.</p>
+        <h5 style="color: #4eb2e0;">Kinga<span> Hakan</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/f13.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p>I applaud you greatly for unfailing service and consistency, just made my third withdrawal. Successful always.</p>
+        <h5 style="color: #4eb2e0;">Jeanna<span> Ramadan</span></h5>
+      </div>
+      <div class="customer_feedback_block">
+        <span><img src="{% static 'img/m12.jpg' %}" alt="customer_img" height="95" width="95" /></span>
+        <p> Great profits. I just made $6,976 with just $1000.</p>
+        <h5 style="color: #4eb2e0;">Mickele<span> Hassan</span></h5>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- Footer Starts -->
+
+{% include 'footer.html' %}
+
+<!-- Footer Ends -->
+<!-- Back To Top Starts  -->
+<a href="#" id="back-to-top" class="back-to-top fa fa-arrow-up"></a>
+<!-- Back To Top Ends  -->
+
+
+</div>
+<!-- Wrapper Ends -->
+
+
+
+
+<!-- ======================= Js File ====================== -->
+
+<!-- j Query -->
+<script type="text/javascript" src="assets/js/jquery-2.1.4.html"></script>
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!-- appear js -->
+<script src="assets/js/jquery.appear.html"></script>
+<!-- jQuery ui js -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.html"></script>
+<!-- count to -->
+<script src="assets/js/jquery.countTo.html"></script>
+<script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+<!-- Template JS Files -->
+<script src="{% static 'bci-assets/js/jquery-2.2.4.min.js' %}"></script>
+<script src="{% static 'bci-assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'bci-assets/js/select2.min.js' %}"></script>
+<script src="{% static 'bci-assets/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'bci-assets/js/custom.js' %}"></script>
+
+<script src="{% static 'bci-assets/js/particle.js' %}"></script>
+<script src="{% static 'bci-assets/js/active.js' %}"></script>
+
+
+
+<script type="text/javascript" src="{% static 'bci-assets/js/ion.rangeSlider.js' %}"></script>
+<script type="text/javascript" src="{% static 'owl.js' %}"></script>
+<script>
+  $.each($('.slider-input'), function() {
+    var $t = $(this),
+
+      from = $t.data('from'),
+      to = $t.data('to'),
+
+      $dailyProfit = $($t.data('dailyprofit')),
+      $totalProfit = $($t.data('totalprofit')),
+
+      $val = $($t.data('valuetag')),
+
+      perDay = $t.data('perday'),
+      perYear = $t.data('peryear');
+
+
+    $t.ionRangeSlider({
+      input_values_separator: ";",
+      prefix: '$ ',
+      hide_min_max: true,
+      force_edges: true,
+      onChange: function(val) {
+        $val.val('$ ' + val.from);
+
+        var profit = (val.from * perDay / 100).toFixed(1);
+        profit = '$ ' + profit.replace('.', '.');
+        $dailyProfit.text(profit);
+
+        profit = ((val.from * perDay / 100) * perYear).toFixed(1);
+        profit = '$ ' + profit.replace('.', '.');
+        $totalProfit.text(profit);
+
+      }
+    });
+  });
+  $('.invest-type__profit--val').on('change', function(e) {
+
+    var slider = $($(this).data('slider')).data("ionRangeSlider");
+
+    slider.update({
+      from: $(this).val().replace('$ ', "")
+    });
+  })
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.customer_carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      center: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        320: {
+          items: 1
+        },
+        480: {
+          items: 2
+        },
+        600: {
+          items: 2
+        },
+        767: {
+          items: 2
+        },
+        991: {
+          items: 3
+        },
+        1200: {
+          items: 3
+        }
+      }
+    });
+  });
+</script>
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.secure_carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        320: {
+          items: 2
+        },
+        480: {
+          items: 2
+        },
+        600: {
+          items: 3
+        },
+        767: {
+          items: 4
+        },
+        991: {
+          items: 4
+        },
+        1200: {
+          items: 5
+        }
+      }
+    });
+  });
+</script>
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.payment_carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        320: {
+          items: 2
+        },
+        480: {
+          items: 3
+        },
+        600: {
+          items: 4
+        },
+        767: {
+          items: 4
+        },
+        991: {
+          items: 5
+        },
+        1200: {
+          items: 6
+        }
+      }
+    });
+  });
+</script>
+
+
+
+</div> <!-- End body_wrapper -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/607b158bf7ce1827093b62eb/1f3it00v8';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+
+<!-- Mirrored from binarycryptoexchange.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:50:15 GMT -->
+
+</html>

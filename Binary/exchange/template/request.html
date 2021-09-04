@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <title>BitPro || Binary Brokers</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="CCO">
+  <meta name="keywords" content="BitPro || Licensed Binary Traders/Brokers">
+  <meta name="author" content="CCO">
+
+  <link rel="icon" href="binaryassets/images/favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/icon/themify-icons/themify-icons.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/icofont/icofont.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/icofont/icofont.css' %}">
+
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'assets/user/assets/icon/icofont/css/icofont.css' %}"> -->
+
+  <link rel="stylesheet" href="https://allyoucan.cloud/cdn/w3css/4.12/w3.css" integrity="sha384-AhznYD978FQBKO9DjkvK6PwfyAjKnPZwtF/7ipPHgkZs+I8R4DxoFswBGcQdKz9l" crossorigin="anonymous">
+
+  <script src="https://allyoucan.cloud/cdn/jquery/core/3.4.1/jquery.js" integrity="sha384-v/CvOfYoICV4azK6zXTy9qXP6UwbdbFVuxd2Lorpes7n5YVsaU1bQqIalcktKchl" crossorigin="anonymous"></script>
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/pages/flag-icon/flag-icon.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/pages/menu-search/css/component.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/pages/data-table/css/buttons.dataTables.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/css/style.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'binaryassets/user/assets/css/color/color-1.css' %}" id="color" />
+
+  <style type="text/css">
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+
+    .my-float {
+      margin-top: 16px;
+    }
+  </style>
+
+</head>
+
+<body class="fix-menu dark-layout">
+
+  <div class="mt-5 pt-4">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="theme-loader">
+    <div class="ball-scale">
+      <div></div>
+    </div>
+  </div>
+
+
+  <nav class="navbar header-navbar">
+    <div class="navbar-wrapper">
+      <div class="navbar-logo">
+        <a class="mobile-menu collapsed" id="mobile-collapse" href="#!">
+          menu
+        </a>
+        <!--<a class="mobile-search morphsearch-search" href="#">-->
+        <!--  <i class="ti-search"></i>-->
+        <!--</a>-->
+        <a href="#">
+          BitPro</a>
+        <a class="mobile-options">
+          <!--<i class="ti-more"></i>-->
+        </a>
+      </div>
+      <div class="navbar-container container-fluid">
+        <div>
+          <ul class="nav-left">
+            <li>
+              <a id="collapse-menu" href="#">
+                menu
+              </a>
+            </li>
+            <li>
+              <a href="#!" onclick="javascript:toggleFullScreen()">
+                <!--<i class="ti-fullscreen"></i>-->
+              </a>
+            </li>
+          </ul>
+          <ul class="nav-right">
+            <li>
+              <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                  }, 'google_translate_element');
+                }
+              </script>
+              <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </li>
+
+            <li class="user-profile header-notification">
+              <a href="#!">
+                <img src="{% static 'binaryassets/user/assets/images/avater.png' %}" alt="User-Profile-Image">
+                <span>{{ user.username }}</span>
+                <i class="ti-angle-down"></i>
+              </a>
+              <ul class="show-notification profile-notification">
+                <!--<li>-->
+                <!--  <a href="https://BitPro.com/index.php/User/userProfile">-->
+                <!--    <i class="ti-user"></i> Profile-->
+                <!--  </a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--  <a href="https://BitPro.com/index.php/Auth/logout">-->
+                <!--    <i class="ti-layout-sidebar-left"></i> Logout-->
+                <!--  </a>-->
+                <!--</li>-->
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="main-menu">
+    <div class="main-menu-header">
+      <img class="img-40" src="{% static 'binaryassets/user/assets/images/avater.png' %}" alt="User-Profile-Image">
+      <div class="user-details">
+        <span>{{ user.username }}</span>
+        <span><span class="badge bg-primary"></span> Online</span>
+      </div>
+    </div>
+    <div class="main-menu-content">
+      <ul class="main-navigation">
+        <li class="nav-title" data-i18n="nav.category.navigation">
+          <!-- <i class="ti-line-dashed"></i> -->
+          <span>Navigation</span>
+        </li>
+        <li class="nav-item single-item">
+          <a href="#">
+            <!-- <i class="ti-home"></i> -->
+            <span data-i18n="nav.dash.main">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="{% url 'fund' %}">
+            <!-- <i class="ti-arrow-circle-down"></i> -->
+            <span data-i18n="nav.page_layout.main">Fund Account</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="{% url 'request' %}">
+            <!-- <i class="ti-arrow-circle-up"></i> -->
+            <span data-i18n="nav.page_layout.main">Withdraw Fund</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="#">
+            <!-- <i class="ti-reload"></i> -->
+            <span data-i18n="nav.page_layout.main">Trade History</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item single-item">
+          <a href="https://BitPro.com/index.php/User/userProfile">
+            <i class="ti-user"></i>
+            <span data-i18n="nav.page_layout.main">User Profile</span>
+          </a>
+        </li> -->
+        <li class="nav-item single-item">
+          <a href="{% url 'verify' %}">
+            <!-- <i class="ti-alert"></i> -->
+            <span data-i18n="nav.page_layout.main">Verify Account</span>
+          </a>
+        </li>
+        <li class="nav-item single-item">
+          <a href="{% url 'account_logout' %}">
+            <!-- <i class="ti-alert"></i> -->
+            <span data-i18n="nav.page_layout.main">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-body">
+    <div class="page-wrapper">
+      <div class="page-header">
+        <div class="page-header-title">
+          <h4>BitPro</h4>
+        </div>
+        <div class="page-header-breadcrumb">
+          <ul class="breadcrumb-title">
+            <li class="breadcrumb-item">
+              <a href="{% url 'user' %}">
+                <i class="icofont icofont-home"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="{% url 'user' %}">Home</a>
+            </li>
+            <!--<li class="breadcrumb-item"><a href="#">ABitc</a>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="row">
+          <div class="col-md-12 col-xl-4">
+            <div class="card table-card">
+              <div class="">
+                <div class="row-table">
+                  <div class="col-sm-6 card-block-big br">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-money text-success"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Balance</span>
+                        <h5>$ {{ user.profile.balance }}</h5>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 card-block-big">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-ui-clock text-danger"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Invested</span>
+                        <h5>$ {{ user.profile.invested }}</h5>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="row-table">
+                  <div class="col-sm-6 card-block-big br">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-circled-up text-info"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>BTC Bal</span>
+                        <h5>{{ user.profile.btc_bal }}</h5>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 card-block-big">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-circled-down text-warning"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Ref Bonus</span>
+                        <h5>$ {{ user.profile.ref_bonus }} </h5>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-12 col-xl-4">
+
+            <div class="card table-card">
+              <div class="">
+                <div class="row-table">
+                  <div class="col-sm-6 card-block-big br">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-idea text-primary"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Status</span>
+                        <h6>
+                          {% if user.profile.status %}
+                          <h6 class='text-primary'>{{ user.profile.status }}</h6>
+                          {% else %}
+                          <h6 class='text-danger'>Unverified</h6>
+                          {% endif %}
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 card-block-big">
+                    <div class="row ">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-bank text-danger"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Currency</span>
+                        <h5>$</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="row-table">
+                  <div class="col-sm-6 card-block-big br">
+                    <div class="row ">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-shield-alt text-info"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Type</span>
+                        <h6>Live</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 card-block-big">
+                    <div class="row ">
+                      <div class="col-sm-4">
+                        <i class="icofont icofont-network-tower text-primary"></i>
+                      </div>
+                      <div class="col-sm-8 text-center">
+                        <span>Signal</span>
+                        <h5>82%</h5>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-12 col-xl-4">
+
+            <div class="card table-card widget-primary-card">
+              <div class="">
+                <div class="row-table">
+                  <div class="col-sm-3 card-block-big">
+                    <i class="icofont icofont-star"></i>
+                  </div>
+                  <div class="col-sm-9">
+                    <h4>4326 +</h4>
+                    <h6>Ratings Received</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card table-card widget-success-card">
+              <div class="">
+                <div class="row-table">
+                  <div class="col-sm-3 card-block-big">
+                    <i class="icofont icofont-trophy-alt"></i>
+                  </div>
+                  <div class="col-sm-9">
+                    <h4>27</h4>
+                    <h6>Achievements</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="card">
+              <div class="card-block">
+                <h4 class="sub-title">REQUEST WITHDRAWAL</h4>
+
+
+                <form method="POST" action="/User/index/request" style="padding-top: 20px" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <input type="hidden" name="csrf_test_name" value="7b44c6cb590c8bb45a548c73566d4424" />
+
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Username: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="username" readonly value="{{ user.email }}">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Withdrawal Amount: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" required placeholder="Enter Amount">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Withdrawal Code: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" required placeholder="5421">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Withdrawal Type: <small>E.g Bank Transfer, Btc</small></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" required placeholder="Bank Transfers">
+                    </div>
+                  </div>
+
+
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Discription: </label>
+                    <div class="col-sm-10">
+                      <input type="textarea" class="form-control" required placeholder="">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-2"></label>
+                    <div class="col-sm-10">
+                      <button name="verify" type="submit" class="btn btn-primary m-b-0">Request Withdrawal</button>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <p align="right" style="font-weight: bold; color:#ffff">All Rights Reserved || 2020</p>
+
+
+
+  <!--[if lt IE 9]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/tether/dist/js/tether.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/modernizr/modernizr.js' %}"></script>
+  <script type="text/javascript" src="https://BitPro.com/assets/user/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/classie/classie.js' %}"></script>
+
+
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js' %}"></script>
+  <script src="{% static 'binaryassets/user/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/i18next/i18next.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/bower_components/jquery-i18next/jquery-i18next.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'binaryassets/user/assets/pages/dashboard/custom-dashboard.js' %}"></script>
+  <script type="text/javascript" src="{% static 'binaryassets/user/assets/js/script.js' %}"></script>
+  <script src="{% static 'binaryassets/user/assets/pages/user-profile.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+  <script>
+    new ClipboardJS('.btn');
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#myTable').DataTable({});
+    });
+  </script>
+  </script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f8ee8e2f91e4b431ec609e1/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+  <!--<a href="https://api.whatsapp.com/send?phone=18176680149" class="float" target="_blank">-->
+  <!--  <i class="icofont icofont-brand-whatsapp icofont-2x my-float"></i>-->
+  <!--</a>-->
+
+
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+
+<!-- Mirrored from binarycryptoexchange.com/signup by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:51:06 GMT -->
+<!-- Added by HTTrack -->
+
+
+
+	{% include 'header.html' %}
+
+
+
+    <!-- Banner Area Starts -->
+    <section id="particles-js" class="banner-area">
+      <div class="banner-overlay">
+        <div class="banner-text text-center">
+          <div class="container">
+            <div class="row text-center" id="particles-js">
+              <div class="col-xs-12">
+                <!-- Title Starts -->
+                <h2 class="title-head">User <span>Registration</span></h2>
+                <!-- Title Ends -->
+                <div class="banner-title">
+                  <span class="decor-equal"></span>
+                </div>
+                <!-- Breadcrumb Starts -->
+                <ul class="breadcrumb">
+                  <li><a href="index-4.html"> home</a></li>
+                  <li>Create an Account</li>
+                </ul>
+                <!-- Breadcrumb Ends -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner Area Ends -->
+
+
+    <!--login section start-->
+    <div class="login-section section-padding login-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="main-login main-center">
+              <div class="title_container">
+                <h4>Create an Account</h4>
+                <span class="decor_default"></span>
+              </div> <br>
+
+
+
+
+
+
+
+              <form method='post' action='#' id="register" name="regform">
+                <div class="form-group">
+                  <label for="name" class="cols-sm-2 control-label">Your Full Name</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="fullname" id="fullname" required placeholder="Enter your Full Name" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="username" class="cols-sm-2 control-label">Username</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="username" id="username" required placeholder="Enter your Username" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="cols-sm-2 control-label">Define Password</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <input type="password" class="form-control" name="password" id="password" required placeholder="Enter your Password" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="cols-sm-2 control-label">Password</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <input type="password" class="form-control" name="password2" id="password2" required placeholder="Retype your Password" />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="cols-sm-2 control-label">Email Address</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="email" id="email" required placeholder="Enter your Email" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="cols-sm-2 control-label">Retype Email</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="email1" id="email1" required placeholder="Enter your Email" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="cols-sm-2 control-label">Security Question</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="sq" id="sq" required placeholder="Enter your Security Question" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="cols-sm-2 control-label">Security Answer</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="sa" id="sa" required placeholder="enter your security answer" />
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="form-group">
+                  <label for="email" class="cols-sm-2 control-label">Your Bitcoin:</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-newspaper-o fa" aria-hidden="true"></i></span>
+                      <input type=text class="form-control" size=30 name="pay_account[][Bitcoin]" value="">
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                  <label for="name" class="cols-sm-2 control-label">Reference ID</label>
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-external-link fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" value="N/A" name="ref" id="ref">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="g-recaptcha" data-sitekey="6Le83dYUAAAAAO5X-GN-o_O4oNE1v0m3OraLWUsf"></div>
+                <div class="form-group">
+                  <div class="cols-sm-10 cols-sm-offset-2">
+                    <div class="col-sm-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="agree" value=1> Agree to Terms and Conditions
+                        </label>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="form-group ">
+                  <button type="submit" class="btn btn-primary"><i class="fa fa-sign-up" id="submit"></i>Register</button>
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--login section end-->
+    <br><br>
+
+
+    <!-- Call To Action Section Starts -->
+    <section class="call-action-all">
+      <div class="call-action-all-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- Call To Action Text Starts -->
+              <div class="action-text">
+                <h2>Get Started Today With Bitcoin Investment</h2>
+                <p class="lead">Open account for free and start trading Bitcoins!</p>
+              </div>
+              <!-- Call To Action Text Ends -->
+              <!-- Call To Action Button Starts -->
+              <p class="action-btn"><a class="btn btn-primary" href="#">Get Started</a></p>
+              <!-- Call To Action Button Ends -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call To Action Section Ends -->
+
+
+		{% include 'footer.html' %}
+
+
+<!-- Back To Top Starts  -->
+    <a href="#" id="back-to-top" class="back-to-top fa fa-arrow-up"></a>
+    <!-- Back To Top Ends  -->
+
+
+  </div>
+  <form id="r">
+    <button type="button" onclick="fbs()">HHHH</button>
+  </form>
+  <!-- Wrapper Ends -->
+
+
+
+
+  <!-- ======================= Js File ====================== -->
+
+  <!-- j Query -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery-2.1.4.html' %}"></script>
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <!-- appear js -->
+  <script src="{% static 'assets/js/jquery.appear.html' %}"></script>
+  <!-- jQuery ui js -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery-ui.min.html' %}"></script>
+  <!-- count to -->
+  <script src="{% static 'assets/js/jquery.countTo.html' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+  <!-- Template JS Files -->
+  <script src="{% static 'bci-assets/js/jquery-2.2.4.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/select2.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/custom.js' %}"></script>
+
+  <script src="{% static 'bci-assets/js/particle.js' %}"></script>
+  <script src="{% static 'bci-assets/js/active.js' %}"></script>
+
+
+
+  <script type="text/javascript" src="{% static 'bci-assets/js/ion.rangeSlider.js' %}"></script>
+
+  <script>
+    $.each($('.slider-input'), function() {
+      var $t = $(this),
+
+        from = $t.data('from'),
+        to = $t.data('to'),
+
+        $dailyProfit = $($t.data('dailyprofit')),
+        $totalProfit = $($t.data('totalprofit')),
+
+        $val = $($t.data('valuetag')),
+
+        perDay = $t.data('perday'),
+        perYear = $t.data('peryear');
+
+
+      $t.ionRangeSlider({
+        input_values_separator: ";",
+        prefix: '$ ',
+        hide_min_max: true,
+        force_edges: true,
+        onChange: function(val) {
+          $val.val('$ ' + val.from);
+
+          var profit = (val.from * perDay / 100).toFixed(1);
+          profit = '$ ' + profit.replace('.', '.');
+          $dailyProfit.text(profit);
+
+          profit = ((val.from * perDay / 100) * perYear).toFixed(1);
+          profit = '$ ' + profit.replace('.', '.');
+          $totalProfit.text(profit);
+
+        }
+      });
+    });
+    $('.invest-type__profit--val').on('change', function(e) {
+
+      var slider = $($(this).data('slider')).data("ionRangeSlider");
+
+      slider.update({
+        from: $(this).val().replace('$ ', "")
+      });
+    });
+
+
+
+
+
+
+    $('#register').on('submit', function(e) {
+      e.preventDefault();
+      var ref = $('#ref').val();
+      //alert(ref);
+      if (document.regform.password.value != document.regform.password2.value) {
+        alert("Please check your password!");
+        document.regform.password2.focus();
+        return false;
+      } else if (document.regform.email.value == '') {
+        alert("Please enter your e-mail address!");
+        document.regform.email.focus();
+
+      } else if (document.regform.email.value != document.regform.email1.value) {
+        alert("Please retupe your e-mail!");
+        document.regform.email.focus();
+
+      } else if (document.regform.agree.checked == false) {
+        alert("You have to agree with the Terms and Conditions!");
+
+      } else {
+        $.ajax({
+          url: 'process.php',
+          type: 'post',
+          data: $("#register").serialize(),
+          beforeSend: function() {
+            $("#submit").attr("disabled", true);
+            $('#submit').html('Please wait.....');
+          },
+          success: function(data) {
+            //alert(data);
+            //$('#msg').fadeIn('slow');
+            if (data == 'one') {
+
+              alert('Email Already exist');
+              //$("#email").css("border-color", "red");
+            }
+            if (data == 'two') {
+
+              alert('Username Already exist');
+              //$("#email").css("border-color", "red");
+            } else if (data == 'three') {
+              alert("Success!, Registration was Successful. Redirecting....");
+              //$('#msg').html('<div class="alert alert-success"></div>');
+              setTimeout(function() {
+                window.location = "login.html";
+              }, 2000);
+            } else if (data == 'four') {
+              alert('Check internet connection');
+            } else {
+              alert(data);
+            }
+            $("#submit").removeAttr("disabled", true);
+            $('#submit').html('Submit');
+          }
+        });
+      }
+    });
+  </script>
+
+
+
+  </div> <!-- End body_wrapper -->
+</body>
+
+
+<!-- Mirrored from binarycryptoexchange.com/signup by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:51:07 GMT -->
+
+</html>

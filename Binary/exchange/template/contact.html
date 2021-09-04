@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!-- Mirrored from binarycryptoexchange.com/support by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:51:08 GMT -->
+<!-- Added by HTTrack -->
+
+
+		{% include 'header.html' %}
+
+    <!-- Banner Area Starts -->
+    <section id="particles-js" class="banner-area">
+      <div class="banner-overlay">
+        <div class="banner-text text-center">
+          <div class="container">
+            <div class="row text-center" id="particles-js">
+              <div class="col-xs-12">
+                <!-- Title Starts -->
+                <h2 class="title-head">Contact <span style="color:#3e3be3">Us</span></h2>
+                <!-- Title Ends -->
+                <div class="banner-title">
+                  <span class="decor-equal"></span>
+                </div>
+                <!-- Breadcrumb Starts -->
+                <ul class="breadcrumb">
+                  <li><a href="index.html" style="color:#3e3be3"> home</a></li>
+                  <li>Contact Us</li>
+                </ul>
+                <!-- Breadcrumb Ends -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner Area Ends -->
+
+
+    <!-- Contact Section Starts -->
+    <section class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 contact-form">
+            <div class="col-xs-12 title_container">
+              <h4>Feel free to drop us a message.</h4>
+              <span style="color:#3e3be3" class="decor_default"></span>
+            </div><!-- Contact Form Starts -->
+            <br /><br />
+
+
+
+
+            <script language=javascript>
+              function checkform() {
+                if (document.mainform.name.value == '') {
+                  alert("Please type your full name!");
+                  document.mainform.name.focus();
+                  return false;
+                }
+                if (document.mainform.email.value == '') {
+                  alert("Please enter your e-mail address!");
+                  document.mainform.email.focus();
+                  return false;
+                }
+                if (document.mainform.message.value == '') {
+                  alert("Please type your message!");
+                  document.mainform.message.focus();
+                  return false;
+                }
+                return true;
+              }
+            </script>
+
+
+            <form method=post name=mainform onsubmit="return checkform()">
+              <input type=hidden name=a value=support>
+              <input type=hidden name=action value=send>
+              <div class="form-group col-md-12">
+              </div>
+
+              <!-- Input Field Starts -->
+              <div class="form-group col-md-6">
+                <input class="form-control" name="name" id="name" placeholder="YOUR NAME" type="text" required>
+              </div>
+              <!-- Input Field Ends -->
+              <!-- Input Field Starts -->
+              <div class="form-group col-md-6">
+                <input class="form-control" name="email" id="email" placeholder="YOUR EMAIL" type="text" required>
+              </div>
+              <!-- Input Field Ends -->
+              <!-- Input Field Starts -->
+
+              <!-- Input Field Ends -->
+
+              <!-- Input Field Starts -->
+              <div class="form-group col-xs-12">
+                <textarea class="form-control" id="message" name="message" placeholder="MESSAGE" required></textarea>
+              </div>
+              <!-- Input Field Ends -->
+              <!-- Submit Form Button Starts -->
+              <div class="form-group col-xs-12 col-sm-4">
+                <button class="btn btn-primary btn-contact" type="submit"><i class="fa fa-flash"></i>&nbsp;send message</button>
+              </div>
+
+            </form>
+            <!-- Submit Form Button Ends -->
+            <!-- Form Submit Message Starts -->
+            <div class="col-xs-12 text-center output_message_holder d-none">
+              <p class="output_message"></p>
+            </div>
+            <!-- Form Submit Message Ends -->
+
+            <!-- Contact Form Ends -->
+          </div>
+          <!-- Contact Widget Starts -->
+          <div class="col-xs-12 col-md-4">
+            <div class="widget">
+              <div class="contact-page-info">
+                <!-- Contact Info Box Starts -->
+                <div class="contact-info-box">
+                  <i style="color:#3e3be3" class="fa fa-home big-icon"></i>
+                  <div class="contact-info-box-content">
+                    <h4>Office Address:</h4>
+                    <p>757 Steve Hunt Road,
+                      Miami FL
+                      33128</p>
+                  </div>
+                </div>
+                <!-- Contact Info Box Ends +18125675121-->
+                <!-- Contact Info Box Starts -->
+                <div class="contact-info-box">
+                  <i style="color:#3e3be3" class="fa fa-phone big-icon"></i>
+                  <div class="contact-info-box-content">
+
+
+                    <h4>Telephone:</h4>
+                    <p>+1 (917) 426 5410</p>
+                  </div>
+                </div>
+                <!-- Contact Info Box Ends +18125675121-->
+                <!-- Contact Info Box Starts -->
+                <div class="contact-info-box">
+                  <i style="color:#3e3be3" class="fa fa-envelope big-icon"></i>
+                  <div class="contact-info-box-content">
+                    <h4>Email Address:</h4>
+
+                    <p><a href="mailto:support@binaryexchangeoptions.com" style="color:#3e3be3">Support@binaryexchangeoptions.com</a></p>
+                  </div>
+                </div>
+                <!-- Contact Info Box Ends -->
+
+
+              </div>
+            </div>
+          </div>
+          <!-- Contact Widget Ends -->
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section Ends -->
+
+		{% include 'footer.html' %}
+
+
+<!-- Back To Top Starts  -->
+    <a href="#" id="back-to-top" class="back-to-top fa fa-arrow-up"></a>
+    <!-- Back To Top Ends  -->
+
+
+  </div>
+  <!-- Wrapper Ends -->
+
+
+
+
+  <!-- ======================= Js File ====================== -->
+
+  <!-- j Query -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery-2.1.4.html' %}"></script>
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <!-- appear js -->
+  <script src="{% static 'assets/js/jquery.appear.html' %}"></script>
+  <!-- jQuery ui js -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery-ui.min.html' %}"></script>
+  <!-- count to -->
+  <script src="{% static 'assets/js/jquery.countTo.html' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+  <!-- Template JS Files -->
+  <script src="{% static 'bci-assets/js/jquery-2.2.4.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/select2.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'bci-assets/js/custom.js' %}"></script>
+
+  <script src="{% static 'bci-assets/js/particle.js' %}"></script>
+  <script src="{% static 'bci-assets/js/active.js' %}"></script>
+
+
+
+  <script type="text/javascript" src="{% static 'bci-assets/js/ion.rangeSlider.js' %}"></script>
+
+  <script>
+    $.each($('.slider-input'), function() {
+      var $t = $(this),
+
+        from = $t.data('from'),
+        to = $t.data('to'),
+
+        $dailyProfit = $($t.data('dailyprofit')),
+        $totalProfit = $($t.data('totalprofit')),
+
+        $val = $($t.data('valuetag')),
+
+        perDay = $t.data('perday'),
+        perYear = $t.data('peryear');
+
+
+      $t.ionRangeSlider({
+        input_values_separator: ";",
+        prefix: '$ ',
+        hide_min_max: true,
+        force_edges: true,
+        onChange: function(val) {
+          $val.val('$ ' + val.from);
+
+          var profit = (val.from * perDay / 100).toFixed(1);
+          profit = '$ ' + profit.replace('.', '.');
+          $dailyProfit.text(profit);
+
+          profit = ((val.from * perDay / 100) * perYear).toFixed(1);
+          profit = '$ ' + profit.replace('.', '.');
+          $totalProfit.text(profit);
+
+        }
+      });
+    });
+    $('.invest-type__profit--val').on('change', function(e) {
+
+      var slider = $($(this).data('slider')).data("ionRangeSlider");
+
+      slider.update({
+        from: $(this).val().replace('$ ', "")
+      });
+    })
+  </script>
+
+
+
+  </div> <!-- End body_wrapper -->
+</body>
+
+
+<!-- Mirrored from binarycryptoexchange.com/support by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Apr 2021 18:51:08 GMT -->
+
+</html>
